@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+
+<!-- Base Tiles Definition--> 
+<definition name="base.definition" path="/tiles/base-layout.jsp">
+<put name="title" value="Variable Paragraphs" />
+</definition> 
+
+
+<definition name="search.definition" extends="base.definition">
+<put name="content" value="/tiles/search.jsp" />
+</definition>
+
+<definition name="result.definition" extends="base.definition">
+<put name="content" value="/tiles/results.jsp" />
+</definition>
+
+<definition name="detail.definition" extends="base.definition">
+<put name="content" value="/tiles/detail.jsp" />
+</definition>
+
+<definition name="login.definition" extends="base.definition">
+<put name="content" value="/admin_tiles/login.jsp" />
+</definition>
+
+<definition name="service.definition" extends="base.definition">
+<put name="content" value="/admin_tiles/services.jsp" />
+</definition>
+
+<definition name="upload.definition" extends="base.definition">
+<put name="content" value="/admin_tiles/upload.jsp" />
+</definition>
+
+
+</tiles-definitions>

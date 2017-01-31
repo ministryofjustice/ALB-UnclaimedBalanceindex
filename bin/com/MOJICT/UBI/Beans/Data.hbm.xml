@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+     
+<hibernate-mapping>
+<class name="com.MOJICT.UBI.Beans.Data" table="ubiData">
+	
+	<id name="ubi_id" column="ubi_id">
+		<generator class="native" />	
+	</id>
+		
+		<property name="case_number"  column="case_number" />
+		<property name="year_carried"  column="year_carried" />	
+		<property name="prime_index"  column="prime_index" />	
+		<property name="chk_char"  column="chk_char" />	
+		<property name="date_search"  column="date_search" type="timestamp" />
+		<property name="date_account"  column="date_account"  />	
+		<property name="credit_detail"  column="credit_detail" />	
+			
+
+</class>
+
+</hibernate-mapping>
+		

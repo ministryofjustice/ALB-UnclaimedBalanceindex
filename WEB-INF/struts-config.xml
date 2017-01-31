@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<!-- This is the Struts configuration file for the Login example application -->
+
+
+<struts-config>
+	<!-- ========== Form Bean Definitions =================================== -->   
+	<form-beans>
+	<form-bean name="frmSearch" type="com.MOJICT.UBI.Forms.DataForm"/>
+	<form-bean name="loginForm" type="com.MOJICT.UBI.Forms.loginBean"/>
+	<form-bean name="frmCsv" type="com.MOJICT.UBI.Forms.CsvForm"/>
+	</form-beans>
+   <!-- ========== Action Mapping Definitions ============================== -->   
+	
+	
+	
+	<action-mappings>
+		   
+		   <action input="search.definition" path="/searchResults" name="frmSearch" type="com.MOJICT.UBI.Actions.SearchAction" scope="request">
+		   <forward name="success" path="result.definition"></forward>
+		   <forward name="failure" path="search.definition"></forward>
+		   </action>   		
+		   
+		   <action input="result.definition" path="/getDetail" type="com.MOJICT.UBI.Actions.DetailAction" scope="request">
+		   <forward name="success" path="detail.definition"></forward>
+		   <forward name="failure" path="/error.jsp"></forward>
+		   </action>   		
+		      		
+      		<action input="login.definition" path="/validateLogin" 
+				type="com.MOJICT.UBI.Actions.ValidateAdminLoginAction"
+				name="loginForm" 
+				scope="request" >
+  			
+  			<forward name="success" path="service.definition"></forward>
+  			<forward name="failure" path="/adminLogin.do"></forward>
+  		  </action>
+  		  
+  		  <action input="service.definition" path="/fileUpload" 
+				type="com.MOJICT.UBI.Actions.UploadCSV"
+				name="loginForm" 
+				scope="request" >
+  			
+  			<forward name="success" path="upload.definition"></forward>
+  			<forward name="failure" path="service.definition"></forward>
+  			<forward name="session" path="login.definition"></forward>
+  			
+  		  </action>
+  		  
+  		  <action input="upload.definition" path="/dumpdata" 
+				type="com.MOJICT.UBI.Actions.dumpDatabase"
+				name="frmCsv" 
+				scope="request" >
+  			
+  			<forward name="success" path="upload.definition"></forward>
+  			<forward name="failure" path="upload.definition"></forward>
+  			<forward name="session" path="login.definition"></forward>
+  			
+  		  </action>		  
+  		  
+  		  <action path="/logOff" 
+				type="com.MOJICT.UBI.Actions.UserLogOffAction"
+				scope="request" >
+  			
+  			<forward name="success" path="login.definition"></forward>
+  		  </action>
+  		
+      		<action path="/search"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="search.definition" scope="request" />
+      		
+      		<action path="/searchResult"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="search.definition" scope="request" />
+			
+			<action path="/adminLogin"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="login.definition" scope="request" />
+			
+			
+      		
+ </action-mappings> 
+
+ 	<!-- ========== Plugins =========================== -->
+ 
+<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+<message-resources null="false" parameter="resources.ApplicationResources.properties"/>
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/struts-tiles-defs.xml"/>
+		<set-property property="definitions-debug" value="2"/>
+		<set-property property="definitions-parser-details" value="2"/>
+		<set-property property="definitions-parser-validate" value="true"/>
+		<set-property property="moduleAware" value="true"/>
+	</plug-in>
+	
+	
+ 
+ <plug-in className="com.library.plugin.HibernatePlugin">
+    <set-property property="path" value="/hibernate.cfg.xml"/>
+  </plug-in>
+ 
+</struts-config>

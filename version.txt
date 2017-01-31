@@ -1,0 +1,21 @@
+UBI Application version 1.0
+27 October 2010
+
+------------------------------------------------
+
+UBI Application version 1.1
+26 July 2011
+New Justice template branding.
+
+
+--------------------------------------------------
+
+UBI Application version 1.2.1
+30 March 2012
+Validation amendments for data.
+
+-------------------------------------------------
+UBI Application version 1.2.2
+10th Sep 2015
+Changed the year drop down to show years unto current year.
+-------------------------------------------------
