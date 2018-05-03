@@ -13,25 +13,15 @@ Dependances
 
 * [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Tomcat 8.5](https://tomcat.apache.org/download-80.cgi)
-* [Apache Ant](https://ant.apache.org/index.html)
 
-Build and Run the Application
------------------------------
+Run the Application
+-------------------
 
 ```
 $ git clone https://github.com/ministryofjustice/ALB-UnclaimedBalanceindex.git
 ```
 
-Navigate to the root of the project, Make sure there is a build.xml file (if not contact the Tactical Products team)
-
-Run ant
-```
-$ ant
-```
-
-Ant will build the app and create a build and deploy folder
-
-Copy the .war file from the deploy folder to tomcat’s webapps folder
+Navigate to the prod folder and download unclaimedbalancesindex.war and copy to tomcat’s webapps folder
 
 Installing Dependances
 ==================
@@ -51,15 +41,6 @@ Add the following
 
 ```
 $ export JAVA_HOME=$(/usr/libexec/java_home)
-```
-
-Installing Ant
------------------
-
-Using Homebrew
-
-```
-$ Brew install ant
 ```
 
 Installing Tomcat
