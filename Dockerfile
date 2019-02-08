@@ -1,0 +1,16 @@
+FROM tomcat:8.0.43-jre8
+
+ENV DB_HOST="172.22.5.164" \
+    DB_PORT="1433" \
+    DB_USER="cbd_user" \
+    DB_PASSWORD="cbd_user" \
+    DB_NAME="CBD" \
+    ADMIN_USER=admin \
+    ADMIN_PASS=admin
+
+ENV CATALINA_OPTS "-Xmx512M -XX:MaxPermSize=1024m"
+
+RUN rm -rf /usr/local/tomcat/webapps/ROOT
+
+ADD "deploy/UBI.war" /usr/local/tomcat/webapps/ROOT.war
+ADD context.xml /usr/local/tomcat/conf/context.xml
