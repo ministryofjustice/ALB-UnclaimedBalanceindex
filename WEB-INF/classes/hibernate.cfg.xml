@@ -7,17 +7,17 @@
  <hibernate-configuration>
  <session-factory>
 <property name="connection.driver_class">org.postgresql.Driver</property> 
-  <property name="connection.url">jdbc:jtds:sqlserver://dev-java-pg.cutundmgf1ze.eu-west-2.rds.amazonaws.com:5432/unclaimedbalanceindexes</property> 
+  <property name="connection.url">jdbc:postgresql://dev-java-pg.cutundmgf1ze.eu-west-2.rds.amazonaws.com:5432/unclaimedbalanceindexes</property> 
   <property name="connection.username">tacticalproducts</property> 
   <property name="connection.password">tacticalproducts</property>
-<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> 
-  <property name="show_sql">false</property> 
-  <property name="hibernate.jdbc.batch_size">1000</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> 
+  <property name="connection.pool_size">100</property>
+  <property name="show_sql">false</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <property name="hibernate.jdbc.batch_size">2000</property>
   <property name="hibernate.cache.use_second_level_cache">false</property>
-  <property name="hibernate.cglib.use_reflection_optimizer">false</property>    
-  
-    <mapping resource="com/MOJICT/UBI/Beans/Data.hbm.xml" />
- 	<mapping resource="com/MOJICT/UBI/Beans/UserBean.hbm.xml" />
- 	<mapping resource="com/MOJICT/UBI/Beans/Path.hbm.xml" />
+  <mapping resource="com/MOJICT/UBI/Beans/Data.hbm.xml" />
+  <mapping resource="com/MOJICT/UBI/Beans/UserBean.hbm.xml" />
+  <mapping resource="com/MOJICT/UBI/Beans/Path.hbm.xml" />
   </session-factory>
   </hibernate-configuration>
