@@ -7,9 +7,9 @@
  <hibernate-configuration>
  <session-factory>
 <property name="connection.driver_class">org.postgresql.Driver</property> 
-  <property name="connection.url">jdbc:postgresql://#{DB_HOST}:5432/#{DB_NAME}</property> 
-  <property name="connection.username">#{DB_USER}</property> 
-  <property name="connection.password">#{DB_PASSWORD}</property>
+  <property name="connection.url">jdbc:postgresql://#{systemProperties['DB_HOST']}:5432/#{systemProperties['DB_NAME']}</property> 
+  <property name="connection.username">#{systemProperties['DB_USER']}</property> 
+  <property name="connection.password">#{systemProperties['DB_PASSWORD']}</property>
   <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> 
   <property name="connection.pool_size">100</property>
   <property name="show_sql">false</property>
