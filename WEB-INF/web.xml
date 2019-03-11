@@ -11,6 +11,10 @@
         <exception-type>org.apache.commons.dbcp.DbcpException</exception-type> 
         <location>/error.jsp</location> 
 	</error-page>
+  <error-page>
+        <error-code>504</error-code> 
+        <location>/data_upload.jsp</location> 
+  </error-page>
 	<error-page>
         <error-code>505</error-code> 
         <location>/error.jsp</location> 
