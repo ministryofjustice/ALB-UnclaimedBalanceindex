@@ -13,4 +13,5 @@ ENV CATALINA_OPTS "-Xmx512M -XX:MaxPermSize=1024m"
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 RUN mkdir -p /opt/hmcs/data/ubi/files
 ADD "UBI.war" /usr/local/tomcat/webapps/ROOT.war
+ADD "UBI.war" /usr/local/tomcat/webapps/unclaimedbalancesindex.war
 ADD context.xml /usr/local/tomcat/conf/context.xml
