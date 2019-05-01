@@ -152,7 +152,7 @@
 													
 													<% String j="";
 													for(Integer i=new java.util.Date().getYear()+1900;i>=2011;i--){ 
- 														System.out.println("Year is >>>>>>>>"+new java.util.Date().getYear()+1900);
+ 														//System.out.println("Year is >>>>>>>>"+new java.util.Date().getYear()+1900);
  														if(i==(new java.util.Date().getYear()+1900)){  
  													%>
  														<optgroup label="<%=i.toString()%> to 2011 ">
@@ -604,7 +604,7 @@
 													<html:option value="0"></html:option>
 													<% String j="";
 													for(Integer i=new java.util.Date().getYear()+1900;i>=2011;i--){ 
- 														System.out.println("Year is >>>>>>>>"+new java.util.Date().getYear()+1900);
+ 														//System.out.println("Year is >>>>>>>>"+new java.util.Date().getYear()+1900);
  														if(i==(new java.util.Date().getYear()+1900)){  
  													%>
  														<optgroup label="<%=i.toString()%> to 2011 ">
