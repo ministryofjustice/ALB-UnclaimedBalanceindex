@@ -101,8 +101,9 @@
 						<div id="Heading">
 							<h1>Unclaimed Balance Index</h1>
 						</div>
-						<p> <Strong>We’d love to know how your experience was today and how can we improve things <a href="https://eu.surveymonkey.com/r/GBKT5HM">Take our 2 minute survey.</a></Strong></p>
-					</div>
+						</div>
+						<H3> <Strong>We'd love to know how your experience was today and how can we improve things <a href="https://eu.surveymonkey.com/r/GBKT5HM">Take our 2 minute survey.</a></Strong></H3>
+					
 					     
 					     <tiles:insert attribute="content" />              	
         
