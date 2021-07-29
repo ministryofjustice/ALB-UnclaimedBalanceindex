@@ -102,9 +102,11 @@
 							<h1>Unclaimed Balance Index</h1>
 						</div>
 						</div>
+
             <div class="banner">
               <h2>Your feedback matters to us</h2>
-              <p>We'd love to know how your experience was today and how can we improve things <a href="https://eu.surveymonkey.com/r/GBKT5HM">Take our 2 minute survey.</a></p>
+              <p>We'd love to know how your experience was today and how we can improve things
+                 <br><a href="https://eu.surveymonkey.com/r/GBKT5HM">Take our 2 minute survey.</a></p>
             </div>
             <style>
               .banner {border: 1px solid rgb(29, 112, 184); width: 80%;}
