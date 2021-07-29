@@ -103,7 +103,7 @@
 						</div>
 						</div>
 						
-						<div> <Strong>We'd love to know how your experience was today and how can we improve things <a href="https://eu.surveymonkey.com/r/GBKT5HM">Take our 2 minute survey.</a></Strong>
+						<div> <Strong>   We'd love to know how your experience was today and how can we improve things <a href="https://eu.surveymonkey.com/r/GBKT5HM">Take our 2 minute survey.</a></Strong>
 					 </div>
 						
 					     <tiles:insert attribute="content" />              	
