@@ -128,7 +128,7 @@
 				<div class="holder"> 
 				<ul> 
 					<li><a accesskey="3" class="first" href="http://www.courtfunds.gov.uk/sitemap.htm">Site map</a> </li> 
-					<li> <a accesskey="0" class="" href="http://www.courtfunds.gov.uk/accessibility.htm">Accessibility</a> </li> 
+					<li> <a accesskey="0" class="" href="/accessibility.htm">Accessibility statement</a> </li> 
 					<li><a accesskey="6" class="" href="http://www.courtfunds.gov.uk/help.htm">Help</a> </li> 
 					<li><a href="http://www.courtfunds.gov.uk/contact/contact.htm">Contact us</a></li> 
 					<li><a accesskey="8" class="" href="http://www.courtfunds.gov.uk/copyright.htm">&#169;Crown copyright 2007. All rights reserved</a> </li> 
