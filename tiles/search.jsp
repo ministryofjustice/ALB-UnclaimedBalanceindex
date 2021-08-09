@@ -52,7 +52,7 @@
 							
 							
 
-							<html:form  styleClass="accessible" action="searchResults.do">
+							<html:form  styleClass="accessible" action="searchResults.do" method="get">
 								<div class="formwrap"> <span class="tl"></span> <span class="tr"><span></span></span>
 									<div class="formcon">
 										<div class="formblock contact first">
