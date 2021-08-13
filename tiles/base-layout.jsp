@@ -103,16 +103,7 @@
 						</div>
 						</div>
 
-            <div class="banner">
-              <h2>Your feedback matters to us</h2>
-              <p>We'd love to know how your experience was today and how we can improve things
-                 <br><a href="https://eu.surveymonkey.com/r/GB7LJPD" target="_blank">Take our 2 minute survey.</a></p>
-            </div>
-            <style>
-              .banner { border: 4px solid rgb(29, 112, 184); width: 80%; margin-left: 1em; margin-bottom: 1rem; }
-              .banner h2 { background: rgb(29, 112, 184); color: white; font-size: 15px; padding: 1rem; margin: 0; }
-              .banner p { padding: 1rem; }
-            </style>
+          
 		
 
 					     <tiles:insert attribute="content" />
@@ -156,7 +147,7 @@
 	<script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2546826,hjsv:6};
+        h._hjSettings={hjid:2546697,hjsv:6};
         a=o.getElementsByTagName('head')[0];
         r=o.createElement('script');r.async=1;
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
