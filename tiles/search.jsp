@@ -61,7 +61,7 @@
 											
 											<div>
 												<div class="odd">
-													<label for="phrase"><span>* With name</span></label>
+													<label for="phrase"><span>* Key word (eg., name, location, case type, company/organisation etc)</span></label>
 												</div>
 												<div class="even">
 													<html:text property="name"></html:text>
