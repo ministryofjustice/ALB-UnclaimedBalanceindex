@@ -27,7 +27,7 @@
 													       <display:setProperty name="paging.banner.placement" value="bottom" />
 													    	   <display:column property="case_number" title="Account Number"  paramId="case_id" paramProperty="case_number" href="getDetail.do" />
 															   <display:column property="prime_index" title="Name" />
-															   <display:column property="date_account" title="Date Account Open" sortable="true"/>
+															   <display:column property="date_account" title="Date Account Open"/>
 													       </display:table>
 											            </div>
 											        </logic:present>
