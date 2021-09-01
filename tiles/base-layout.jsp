@@ -105,8 +105,9 @@
 
           <div class="banner">
               <h2>Your feedback matters to us</h2>
-              <p>We'd love to know how your experience was today and how we can improve things
-                 <br><a href="https://eu.surveymonkey.com/r/B9X2SKY">Take our 2 minute survey.</a></p>
+		  <p>Is this your first visit?  If so we need your help...</p>
+		  <p>Please <a href="https://eu.surveymonkey.com/r/B9X2SKY">click here</a> to find out more
+                 </p>
             </div>
             <style>
               .banner { border: 4px solid rgb(29, 112, 184); width: 80%; margin-left: 1em; margin-bottom: 1rem; }
