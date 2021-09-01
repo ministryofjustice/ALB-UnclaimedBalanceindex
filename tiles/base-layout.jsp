@@ -155,7 +155,6 @@
   ga('send', 'pageview');
 
 </script>
-	<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.eu.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd7diSQQYasAc9h3qm35G1l1BIk62at2o_2BDg7CurxtvZv.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script> 
 	
 </body>
 </html>
