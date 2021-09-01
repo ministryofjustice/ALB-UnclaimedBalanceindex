@@ -156,15 +156,6 @@
 
 </script>
 	<script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.eu.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd7diSQQYasAc9h3qm35G1l1BIk62at2o_2BDg7CurxtvZv.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script> 
-	<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2546697,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+	
 </body>
 </html>
