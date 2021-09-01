@@ -105,8 +105,8 @@
 
           <div class="banner">
               <h2>Your feedback matters to us</h2>
-		  <p>Is this your first visit?  If so we need your help...</p>
-		  <p>Please <a href="https://eu.surveymonkey.com/r/B9X2SKY">click here</a> to find out more
+		  <p>Is this your first visit?  If so we need your help...</br>
+		  Please <a href="https://eu.surveymonkey.com/r/B9X2SKY">click here</a> to find out more
                  </p>
             </div>
             <style>
