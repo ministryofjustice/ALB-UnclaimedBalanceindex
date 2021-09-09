@@ -23,6 +23,11 @@
 		   <action input="search.definition" path="/searchResults" name="frmSearch" type="com.MOJICT.UBI.Actions.SearchAction" scope="request">
 		   <forward name="success" path="result.definition"></forward>
 		   <forward name="failure" path="search.definition"></forward>
+		   </action>
+		   
+		   <action input="search.definition" path="/downloadResults" name="frmSearch" type="com.MOJICT.UBI.Actions.ResultdownloadAction" scope="request">
+		   <forward name="success" path="result.definition"></forward>
+		   <forward name="failure" path="search.definition"></forward>
 		   </action>   		
 		   
 		   <action input="result.definition" path="/getDetail" type="com.MOJICT.UBI.Actions.DetailAction" scope="request">

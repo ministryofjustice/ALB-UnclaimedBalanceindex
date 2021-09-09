@@ -29,10 +29,7 @@
 													    	   <display:column property="case_number" title="Account Number"  paramId="case_id" paramProperty="case_number" href="getDetail.do" />
 															   <display:column property="prime_index" title="Name" />
 															   <display:column property="date_account" title="Date Account Open"/>
-															    <display:setProperty name="export.pdf.filename" value="results.pdf"/>
-													                   <display:setProperty name="export.excel.filename" value="results.xls"/>
-													       		   <display:setProperty name="export.pdf" value="true" />
-													      		 <display:setProperty name="export.excel" value="true" />
+															    
 													       </display:table>
 											            </div>
 											        </logic:present>
