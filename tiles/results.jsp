@@ -1,4 +1,4 @@
-<%@ taglib uri="/WEB-INF/displaytag.tld" prefix="display" %>
+<%@ taglib uri="http://displaytag.sf.net" prefix="display" %>
 <%@ taglib uri="/WEB-INF/tld/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
