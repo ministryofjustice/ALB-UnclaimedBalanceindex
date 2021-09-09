@@ -23,7 +23,7 @@
 		
 													<logic:present name="results" >
 											            <div align="left">    
-											               <display:table  id="result" class="cro"  name="requestScope.results" requestURI=""  pagesize="50" sort="list">
+											               <display:table  id="result" class="cro"  name="requestScope.results" requestURI=""  pagesize="50" sort="list" export="true">
 													       <display:setProperty name="paging.banner.placement" value="bottom" />
 													    	   <display:column property="case_number" title="Account Number"  paramId="case_id" paramProperty="case_number" href="getDetail.do" />
 															   <display:column property="prime_index" title="Name" />
