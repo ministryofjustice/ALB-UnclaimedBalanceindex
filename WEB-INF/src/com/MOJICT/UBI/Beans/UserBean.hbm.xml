@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.MOJICT.UBI.Beans.UserBean" table="dbusers">
+
+	<id name="user_id" column="user_id">
+		<generator class="native" />
+	</id>
+
+		<property name="login_name"  column="login_name" />
+		<property name="firstname"  column="firstname" />
+		<property name="surname"  column="surname" />
+		<property name="password"  column="password" />
+
+</class>
+
+</hibernate-mapping>
