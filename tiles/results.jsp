@@ -29,6 +29,8 @@
 															   <display:column property="prime_index" title="Name" />
 															   <display:column property="date_account" title="Date Account Open"/>
 													                   <display:setProperty name="export.excel.filename" value="results.xls"/>
+													       		   <display:setProperty name="export.pdf" value="true" />
+													      		 <display:setProperty name="export.excel" value="true" />
 													       </display:table>
 											            </div>
 											        </logic:present>
