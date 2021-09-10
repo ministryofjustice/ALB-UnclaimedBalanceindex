@@ -104,7 +104,7 @@ public class SearchAction extends Action
         catch (Exception ex) {
 
             //request.setAttribute("results", (Object)arrResults);
-           // System.out.println("Its coming here in catch exception");
+            System.out.println("Its coming here in catch exception");
             ex.printStackTrace();
         }
         finally
