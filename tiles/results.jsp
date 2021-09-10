@@ -21,7 +21,7 @@
 											<fieldset>
 											<logic:present name="search"> <h3>You searched for <bean:write name="search" filter="false"/></h3></logic:present>
 											<div class="formblock">
-		                                    <a href="downloadResults.do?name=<%=request.getparameter("name"); %>">Click here</a> to downlaod csv file for this search.
+		                                    <a href="downloadResults.do?name=<%=request.getParameter("name"); %>">Click here</a> to downlaod csv file for this search.
 													<logic:present name="results" >
 											            <div align="left">    
 											               <display:table  id="result" class="cro"  name="requestScope.results" requestURI=""  pagesize="50" sort="list" export="true">
