@@ -63,7 +63,14 @@ public class ResultdownloadAction extends Action
             //factory = (SessionFactory)this.servlet.getServletContext().getAttribute(HibernatePlugin.KEY_NAME);
             factory = DBConnection.getDBConnection();
             session = (Session)factory.openSession();
-
+            frm.setName("smith");
+            frm.setCase_number(" ");
+            frm.setFrom_day("0");
+            frm.setFrom_month("0");
+            frm.setFrom_year("0");
+            frm.setTo_day("0");
+            frm.setTo_month("0");
+            frm.setTo_year("0");
             String msg = "";
             if (frm.getName().trim() == null || frm.getName().trim().equals("")) {
                 msg = "required";
