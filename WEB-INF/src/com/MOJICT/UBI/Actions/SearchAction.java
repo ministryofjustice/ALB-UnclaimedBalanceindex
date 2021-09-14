@@ -26,6 +26,7 @@ import org.hibernate.SessionFactory;
 
 import com.MOJICT.UBI.Forms.DataForm;
 
+import org.apache.log4j.Logger;
 import org.apache.struts.action.ActionForward;
 
 import javax.servlet.http.HttpServletResponse;
@@ -47,7 +48,8 @@ public class SearchAction extends Action
     }
 
     public ActionForward execute(final ActionMapping mapping, final ActionForm form, final HttpServletRequest request, final HttpServletResponse response) throws IOException, ServletException, Exception {
-        Session session = null;
+    	Logger logger = Logger.getLogger(SearchAction.class);
+    	Session session = null;
         SessionFactory factory = null;
         List arrResults = null;
         Query qry = null;
@@ -86,7 +88,7 @@ public class SearchAction extends Action
                 return mapping.findForward("failure");
             }
             qry = session.createQuery(this.strQry);
-            System.out.println(this.strQry);
+            logger.info(this.strQry);
             if (this.dateFlag) {
                 final int frm_year = Integer.parseInt(frm.getFrom_year()) + 2000;
                 final String from_year = String.valueOf(frm_year);
@@ -103,8 +105,8 @@ public class SearchAction extends Action
         }
         catch (Exception ex) {
 
-            //request.setAttribute("results", (Object)arrResults);
-            System.out.println("Its coming here in catch exception");
+            request.setAttribute("results", (Object)arrResults);
+           logger.info("Its coming here in catch exception");
             ex.printStackTrace();
         }
         finally
