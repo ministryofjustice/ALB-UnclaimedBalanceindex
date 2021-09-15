@@ -53,7 +53,7 @@ public class SearchAction extends Action
         SessionFactory factory = null;
         List arrResults = null;
         Query qry = null;
-        this.strQry = "from Data data ORDER BY to_date(data.date_account,'DD/MM/YYYY') where ";
+        this.strQry = "from Data data where ";
         this.dateFlag = false;
         try {
             DataForm frm = (DataForm)form;

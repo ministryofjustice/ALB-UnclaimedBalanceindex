@@ -29,6 +29,7 @@ import com.library.plugin.HibernatePlugin;
 
 import org.hibernate.SessionFactory;
 
+import com.MOJICT.UBI.Beans.Data;
 import com.MOJICT.UBI.Forms.DataForm;
 
 import org.apache.commons.lang.StringUtils;
@@ -59,21 +60,22 @@ public class ResultdownloadAction extends Action
         SessionFactory factory = null;
         List<String> arrResults = null;
         Query qry = null;
-        this.strQry = "from Data data ORDER BY to_date(data.date_account,'DD/MM/YYYY') where ";
+        this.strQry = "from Data data where ";
         this.dateFlag = false;
         try {
-            DataForm frm = (DataForm)form;
+            DataForm frm = (DataForm)new DataForm();
             //factory = (SessionFactory)this.servlet.getServletContext().getAttribute(HibernatePlugin.KEY_NAME);
             factory = DBConnection.getDBConnection();
             session = (Session)factory.openSession();
-            frm.setName("smith");
-            frm.setCase_number(" ");
-            frm.setFrom_day("0");
-            frm.setFrom_month("0");
-            frm.setFrom_year("0");
-            frm.setTo_day("0");
-            frm.setTo_month("0");
-            frm.setTo_year("0");
+            
+            frm.setName(request.getParameter("name"));
+            frm.setCase_number(request.getParameter("case_number"));
+            frm.setFrom_day(request.getParameter("from_day"));
+            frm.setFrom_month(request.getParameter("from_month"));
+            frm.setFrom_year(request.getParameter("from_year"));
+            frm.setTo_day(request.getParameter("to_day"));
+            frm.setTo_month(request.getParameter("to_month"));
+            frm.setTo_year(request.getParameter("to_year"));
             String msg = "";
             if (frm.getName().trim() == null || frm.getName().trim().equals("")) {
                 msg = "required";
@@ -112,14 +114,26 @@ public class ResultdownloadAction extends Action
             }
             arrResults = qry.list();
             frm = null;
-            FileWriter writer = new FileWriter("/opt/hmcs/data/ubi/files/data.csv");
+            String commalist="Name,Case_Number,Year Carried Over,Credit Details,Date Account Opened"+"\n";
+            Data data=null;
+            //FileWriter writer = new FileWriter("/files/data.csv");
+            for(Object map : arrResults)
+            {
+            	data = (Data) map;
+            	commalist=commalist+data.getPrime_index()+","+data.getCase_number()+","+data.getYear_carried()+","+data.getCredit_detail()+","+data.getDate_account()+"\n";
+            	
+            	
+            	//System.out.println(data.getPrime_index());
+            	//System.out.println(data.getCase_number());
+            	
+            	
+            }
 
+          // commalist = StringUtils.join(arrResults.toArray(), ",");
+            //System.out.println(commalist);
 
-            String commalist = StringUtils.join(arrResults.toArray(), ",");
-            System.out.println(commalist);
-
-            writer.write(commalist);
-            writer.close();
+           // writer.write(commalist);
+           // writer.close();
             response.setContentType("text/csv");
             response.setHeader("Content-Disposition", "attachment; filename=\"userDirectory.csv\"");
             try

@@ -25,8 +25,12 @@
 		   <forward name="failure" path="search.definition"></forward>
 		   </action>
 		   
-		   <action input="result.definition" path="/downloadResults" name="frmSearch" type="com.MOJICT.UBI.Actions.ResultdownloadAction" scope="request">
+		   <action input="result.definition" path="/downloadResults" type="com.MOJICT.UBI.Actions.ResultdownloadAction" scope="request">
 		   <forward name="success" path="result.definition"></forward>
+		   <forward name="failure" path="search.definition"></forward>
+		   </action> 
+		   <action input="search.definition" path="/csvdownload"  type="com.MOJICT.UBI.Actions.csvdownloadAction" scope="request">
+		   <forward name="success" path="search.definition"></forward>
 		   <forward name="failure" path="search.definition"></forward>
 		   </action>   		
 		   

@@ -21,10 +21,10 @@
 											<fieldset>
 											<logic:present name="search"> <h3>You searched for <bean:write name="search" filter="false"/></h3></logic:present>
 											<div class="formblock">
-		                                    <a href="downloadResults.do?name=<%=request.getParameter("name") %>&case_number=&from_day=0&from_month=0&from_year=0&to_day=0&to_month=0&to_year=0">Click here</a> to downlaod csv file for this search.
+		                                    <a href="downloadResults.do?name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Click here</a> to downlaod csv file for this search.
 													<logic:present name="results" >
 											            <div align="left">    
-											               <display:table  id="result" class="cro"  name="requestScope.results" requestURI=""  pagesize="50" sort="list" export="true">
+											               <display:table  id="result" class="cro"  name="requestScope.results" requestURI=""  pagesize="50" sort="list">
 													       <display:setProperty name="paging.banner.placement" value="bottom" />
 													    	   <display:column property="case_number" title="Account Number"  paramId="case_id" paramProperty="case_number" href="getDetail.do" />
 															   <display:column property="prime_index" title="Name" />
