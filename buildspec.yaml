@@ -23,7 +23,7 @@ phases:
       - echo Created build tag `cat BUILD_TAG.txt`
       - echo Build started on `date`
       - echo Building the WAR file image...
-      - ant
+      - zip -qr UBI.war *
       - echo Building the Docker image...
       - docker build -t $APPNAME:`cat BUILD_TAG.txt` .
       - docker tag $APPNAME:`cat BUILD_TAG.txt` 613903586696.dkr.ecr.eu-west-2.amazonaws.com/tp-java/$APPNAME:`cat BUILD_TAG.txt`
