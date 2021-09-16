@@ -236,7 +236,7 @@
 			</fileset>
 		</copy>
 		<copy todir="build/WEB-INF/classes" overwrite="true">
-
+											
 					<fileset dir="dev">
 						<include name="hibernate.cfg.xml"/>
 					</fileset>
@@ -353,7 +353,11 @@
 				<include name="admin_tiles/**" />
 				<include name="tiles/**" />
 				<include name="images/**" />
-				
+				<include name="accessibility.html" />
+								<include name="accessibility_welsh.html" />
+				<include name="log4j.properties" />
+								<include name="licence.txt" />
+								
 			    <include name="directGov/**"/>
 				<exclude name="WEB-INF/**/*.class" />
 			</fileset>

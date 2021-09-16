@@ -137,9 +137,9 @@ public class ResultdownloadAction extends Action
            // writer.close();
             response.setContentType("text/csv");
             Date date=new Date();
-            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-mm-dd");
+            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 
-            response.setHeader("Content-Disposition", "attachment; filename=\"Unclaimed Court Accounts_"+sdf.format(date)+".csv\"");
+            response.setHeader("Content-Disposition", "attachment; filename=\"Unclaimed Court Accounts"+sdf.format(date)+".csv\"");
             try
             {
                 OutputStream outputStream = response.getOutputStream();
