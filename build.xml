@@ -151,9 +151,6 @@
 		<war destfile="deploy/UBI.war" webxml="WEB-INF/web.xml">
 			<fileset dir="build"/>
 		</war>
-		<war destfile="UBI.war" webxml="WEB-INF/web.xml">
-					<fileset dir="build"/>
-				</war>
 	</target>
 
 	<!-- - - - - - - - - - - - - - - - - - 
@@ -238,7 +235,13 @@
 				
 			</fileset>
 		</copy>
-		
+		<copy todir="build/WEB-INF/classes" overwrite="true">
+
+					<fileset dir="dev">
+						<include name="hibernate.cfg.xml"/>
+					</fileset>
+
+					</copy>
 			
 		
 	</target>
@@ -350,16 +353,9 @@
 				<include name="admin_tiles/**" />
 				<include name="tiles/**" />
 				<include name="images/**" />
-				<include name="accessibility.html" />
-				<include name="accessibility_welsh.html" />
-				<include name="index.jsp" />
-				<include name="error.jsp" />
-				<include name="log4j.properties" />
-				<include name="licence.txt" />
-				
 				
 			    <include name="directGov/**"/>
-				
+				<exclude name="WEB-INF/**/*.class" />
 			</fileset>
 		</copy>
 	</target>
@@ -371,10 +367,40 @@
 	<!-- ================================= 
           target: run_selenium_tests              
          ================================= -->
-	
+	<target name="run_selenium_tests" description="run the selected selenium test" >
+		<java classname="selenium.IAFT_EndToEndFullTest" fork="true">
+			<classpath refid="test_classpath"/>
+		</java>
+	</target>
 
 	<!-- ================================= 
           target: run_junit_tests              
          ================================= -->
-	
+	<target name="run_junit_tests" description="run the selected junit tests">
+		<delete quiet="true">
+			<fileset dir="./testreport/xml"  />
+		</delete>
+		<mkdir dir="./testreport"/>
+		<mkdir dir="./testreport/xml"/>
+
+		<junit fork="no" printsummary="yes" haltonfailure="no" showoutput="yes" dir=".">
+			<classpath refid="test_classpath"/>
+			<classpath>
+				<pathelement path="build" />
+			</classpath>
+			<formatter type="xml"/>
+			<batchtest todir="./testreport/xml">
+				<fileset dir="test">
+					<include name="**/IAFT_EndToEndFullTest.java"/>
+					<include name="**/DemoTest.java"/>
+				</fileset>
+			</batchtest>
+		</junit>
+		<junitreport todir="./testreport">
+			<fileset dir="./testreport/xml">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="./testreport" />
+		</junitreport>
+	</target>
 </project>
