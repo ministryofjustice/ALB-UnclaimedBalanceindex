@@ -18,6 +18,7 @@ import java.io.OutputStream;
 
 import org.hibernate.Query;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -135,7 +136,10 @@ public class ResultdownloadAction extends Action
            // writer.write(commalist);
            // writer.close();
             response.setContentType("text/csv");
-            response.setHeader("Content-Disposition", "attachment; filename=\"userDirectory.csv\"");
+            Date date=new Date();
+            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-mm-dd");
+
+            response.setHeader("Content-Disposition", "attachment; filename=\"Unclaimed Court Accounts_"+sdf.format(date)+".csv\"");
             try
             {
                 OutputStream outputStream = response.getOutputStream();

@@ -17,7 +17,7 @@
      								<p>with name - Smith v Jones Insurance</p>
  
 									<p>Please note the more information completed the narrower the results will be"</p>
-									<p>Download data in csv format <a href="csvdownload.do">click here</a>
+
 							</div>
 							
 							<logic:present name="yearError" scope="request">

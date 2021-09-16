@@ -21,7 +21,7 @@
 											<fieldset>
 											<logic:present name="search"> <h3>You searched for <bean:write name="search" filter="false"/></h3></logic:present>
 											<div class="formblock">
-		                                    <a href="downloadResults.do?name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Click here</a> to downlaod csv file for this search.
+		                                    <a href="downloadResults.do?name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Download results as CSV</a>
 													<logic:present name="results" >
 											            <div align="left">    
 											               <display:table  id="result" class="cro"  name="requestScope.results" requestURI=""  pagesize="50" sort="list">
