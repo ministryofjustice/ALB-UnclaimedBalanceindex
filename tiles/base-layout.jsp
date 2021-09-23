@@ -34,45 +34,6 @@
 	<meta name="robots" content="noindex, nofollow" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 
-
-<link rel="stylesheet" type="text/css" href="directGov/dg/css/dg.css" />
-<!--[if lte IE 7]>
-		<link href="directGov/common/css/dgie.css" rel="stylesheet" type="text/css" media="screen" />
-	<![endif]-->
-<!--[if IE 6]>
-		<link href="directGov/common/css/dgie6.css" rel="stylesheet" type="text/css" media="screen" />
-	<![endif]-->
-<link rel="alternate stylesheet" type="text/css" href="directGov/common/css/standard.css" title="Standard" />
-<link rel="alternate stylesheet" type="text/css" href="directGov/common/css/larger.css" title="Larger" />
-<link rel="alternate stylesheet" type="text/css" href="directGov/common/css/largest.css" title="Largest" />	
-<link rel="stylesheet" type="text/css" href="directGov/common/css/complex_table.css" />	
-
-<script type="text/javascript" src="directGov/common/js/jquery.js"></script>
-<script type="text/javascript" src="directGov/common/js/dg.js"></script>
-<script type="text/javascript" src="directGov/common/js/complextable.js"></script>	
-
-<!-- CSS for banner -->
-<style type="text/css">
-#moj-header {width: 100%; background-color: #fff; padding: 0; margin: 14px 0 0 0; border: 0;}
-#moj-header #moj-logo {display:block; width: 170px; float:left; border: 0; background-color: #fff; margin: 0 0 0 20px; padding: 0}
-#moj-header #moj-logo img.moj-image {padding: 0; margin: 0 0 15px 0; border: 0; background-color: #fff;}
-#moj-header #service-provider {display:block; float:right; margin: 0 0 15px 0; padding: 0; width: 460px;}
-#moj-header #service-provider #sp-text {float: left; padding: 0; margin: 0; border: 0; background-color: #fff; text-align: right; width: 171px;}
-#moj-header #service-provider #sp-text p {color: #6e6e6e; font-size: 1.1em; padding: 0; margin: 0; text-align: right;}
-#moj-header #service-provider #sp-logo {float: right; padding: 0; margin: 0 45px 0 0; border: 0; background-color: #fff; width: 239px;}
-#moj-header #service-provider #sp-logo img.moj-image {padding: 0; margin: 0; border: 0; background-color: #fff;}
-.moj-clear {clear: both; padding: 0; margin: 0 47px 0 20px; border-top: 28px solid #7d7d7d; border-bottom: 3px solid #007ce6;}
-#Section {border-top: 0;}
-</style>
- 
-<!--[if IE 7]>
-   <style type="text/css">
-     #moj-header #moj-logo img.moj-image {margin: 0 0 23px 0;}
-     #moj-header #service-provider {margin: 0 47px 23px 0; width: 415px;}
-     #moj-header #service-provider #sp-text {float: left; padding: 0; margin: 0; border: 0; background-color: #fff; text-align: right;}
-     #moj-header #service-provider #sp-logo {float: right; padding: 0; margin: 0; border: 0; background-color: #fff;}
-   </style>
-<![endif]-->
 </head>
 
 <body>
@@ -103,7 +64,13 @@
 						</div>
 						</div>
 
-         
+          <div class="banner">
+              <h2>Your feedback matters to us</h2>
+		  <p>We could do with your help to improve this site ...</br>
+		  Please <a href="https://eu.surveymonkey.com/r/B9X2SKY">click here</a> to find out more
+                 </p>
+            </div>
+
 
 					     <tiles:insert attribute="content" />
 
@@ -144,17 +111,6 @@
   ga('create', 'UA-37377084-49', 'auto');
   ga('send', 'pageview');
 
-</script>
-	<!-- Hotjar Tracking Code for Unclaimed Balance Index: Production -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2546697,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 	
 </body>
