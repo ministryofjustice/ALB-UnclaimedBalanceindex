@@ -46,18 +46,7 @@
 		<div class="innerwrapper">
 			<div class="twocolfloat">
 
-<div id="TopBar">
-    <!-- Start banner -->
-    <div id="moj-header">
-        <div id="moj-logo"><a href="http://www.justice.gov.uk/index.htm"><img src="directGov/dg/images/logo-blue-banner.gif" class="moj-image" alt="Justice homepage" /></a></div>
-        <div id="service-provider"> 
-            <div id="sp-text"><p>Service provided by:</p></div>
-            <div id="sp-logo"><a href="http://www.justice.gov.uk/about/cfo/index.htm"><img src="directGov/dg/images/logo-cfo.gif" alt="About the Court Funds Office" class="moj-image" /></a></div>
-        </div>
-        <div class="moj-clear"></div>
-    </div>
-   <!-- End banner -->
-</div>                          
+                         
 				
         <div class="onecolblock">
 					<div id="Section">

@@ -9,11 +9,15 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>Court Funds Office</title>
+	 <title>Court Funds Office</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
 
-<title> 
-      Court Funds Office - Offices of Court Funds, Official Solicitor and Public Trustee
-    </title> 
+   <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="DC.title" content="Court Funds Office - Offices of Court Funds, Official Solicitor and Public Trustee" /> 
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /> 
     <meta name="Keywords" content="Court funds, Official Solicitor, Public Trustee, Court Funds Office, CFO, payments into court, Court of Protection, Investment and Banking" /> 
@@ -32,86 +36,82 @@
     <meta name="DC.rights.copyright" content="Crown Copyright" /> 
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />	
 	<meta name="robots" content="noindex, nofollow" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-
+  <link rel="stylesheet" href="/stylesheets/govuk-frontend-3.13.1.min.css">
 </head>
 
-<body>
-<div class="iewrapper">
-	<div class="wrapper"> <a href="#Heading" class="access">Go to main content</a>
-		
-		<div class="innerwrapper">
-			<div class="twocolfloat">
+<body class="govuk-template__body ">
+  <script>
+      document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+  <div class="iewrapper">
+  	<div class="wrapper"> <a href="#Heading" class="access">Go to main content</a>
+  		
+  		<div class="innerwrapper">
+  			<div class="twocolfloat">
 
-<div id="TopBar">
-    <!-- Start banner -->
-    <div id="moj-header">
-        <div id="moj-logo"><a href="http://www.justice.gov.uk/index.htm"><img src="directGov/dg/images/logo-blue-banner.gif" class="moj-image" alt="Justice homepage" /></a></div>
-        <div id="service-provider"> 
-            <div id="sp-text"><p>Service provided by:</p></div>
-            <div id="sp-logo"><a href="http://www.justice.gov.uk/about/cfo/index.htm"><img src="directGov/dg/images/logo-cfo.gif" alt="About the Court Funds Office" class="moj-image" /></a></div>
-        </div>
-        <div class="moj-clear"></div>
-    </div>
-   <!-- End banner -->
-</div>                          
-				
-        <div class="onecolblock">
-					<div id="Section">
-						<div id="TextSize"> </div>
-						<div id="Heading">
-							<h1>Unclaimed Balance Index</h1>
-						</div>
-						</div>
+                        
+  				
+          <div class="onecolblock">
+  					<div id="Section">
+  						<div id="TextSize"> </div>
+  						<div id="Heading">
+  							<h1>Unclaimed Balance Index</h1>
+  						</div>
+  						</div>
 
-          <div class="banner">
-              <h2>Your feedback matters to us</h2>
-		  <p>We could do with your help to improve this site ...</br>
-		  Please <a href="https://eu.surveymonkey.com/r/B9X2SKY">click here</a> to find out more
-                 </p>
-            </div>
+            <div class="banner">
+                <h2>Your feedback matters to us</h2>
+  		  <p>We could do with your help to improve this site ...</br>
+  		  Please <a href="https://eu.surveymonkey.com/r/B9X2SKY">click here</a> to find out more
+                   </p>
+              </div>
 
 
-					     <tiles:insert attribute="content" />
+  					     <tiles:insert attribute="content" />
 
-             	<div id="LHC">
-				<div class="holder"> </div>
-			</div>
-		</div>
-		
+               	<div id="LHC">
+  				<div class="holder"> </div>
+  			</div>
+  		</div>
+  		
 
-    
-          <!-- footer starts --> 
-          
-          <div id="Footer">
-				<div class="holder"> 
-				<ul> 
-					<li><a accesskey="3" class="first" href="http://www.courtfunds.gov.uk/sitemap.htm">Site map</a> </li> 
-					<li> <a accesskey="0" class="" href="/accessibility.htm">Accessibility statement</a> </li> 
-					<li> <a accesskey="0" class="" href="/accessibility_welsh.htm">Accessibility statement - Cymraeg</a> </li> 
-					<li><a accesskey="6" class="" href="http://www.courtfunds.gov.uk/help.htm">Help</a> </li> 
-					<li><a href="http://www.courtfunds.gov.uk/contact/contact.htm">Contact us</a></li> 
-					<li><a accesskey="8" class="" href="http://www.courtfunds.gov.uk/copyright.htm">&#169;Crown copyright 2007. All rights reserved</a> </li> 
-				</ul> 
-			</div>	
-		</div>
-     
-	</div>
-</div>
+      
+            <!-- footer starts --> 
+            
+            <div id="Footer">
+  				<div class="holder"> 
+  				<ul> 
+  					<li><a accesskey="3" class="first" href="http://www.courtfunds.gov.uk/sitemap.htm">Site map</a> </li> 
+  					<li> <a accesskey="0" class="" href="/accessibility.htm">Accessibility statement</a> </li> 
+  					<li> <a accesskey="0" class="" href="/accessibility_welsh.htm">Accessibility statement - Cymraeg</a> </li> 
+  					<li><a accesskey="6" class="" href="http://www.courtfunds.gov.uk/help.htm">Help</a> </li> 
+  					<li><a href="http://www.courtfunds.gov.uk/contact/contact.htm">Contact us</a></li> 
+  					<li><a accesskey="8" class="" href="http://www.courtfunds.gov.uk/copyright.htm">&#169;Crown copyright 2007. All rights reserved</a> </li> 
+  				</ul> 
+  			</div>	
+  		</div>
+       
+  	</div>
+  </div>
 
 
-</div>
-</div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </div>
+  </div>
 
-  ga('create', 'UA-37377084-49', 'auto');
-  ga('send', 'pageview');
+  <script src="/javascript/govuk-frontend-3.13.1.min.js"></script>
+    <script>
+      window.GOVUKFrontend.initAll()
+    </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-</script>
+    ga('create', 'UA-37377084-49', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 	
 </body>
 </html>
