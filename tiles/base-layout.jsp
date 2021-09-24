@@ -36,8 +36,7 @@
     <meta name="DC.format" content="Text/HTML" /> 
     <meta name="DC.language" content="eng" /> 
     <meta name="DC.rights.copyright" content="Crown Copyright" /> 
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />	
-	<meta name="robots" content="noindex, nofollow" />
+	  <meta http-equiv="content-type" content="text/html;charset=utf-8" />	
   <link rel="stylesheet" href="/stylesheets/govuk-frontend-3.13.1.min.css">
 </head>
 
