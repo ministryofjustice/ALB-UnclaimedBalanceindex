@@ -7,7 +7,7 @@ package com.MOJICT.UBI.Forms;
 import org.apache.struts.upload.FormFile;
 import org.apache.struts.action.ActionForm;
 
-public class loginBean extends ActionForm
+public class loginBean extends org.apache.struts.validator.ValidatorForm 
 {
     private int user_id;
     private String login_name;

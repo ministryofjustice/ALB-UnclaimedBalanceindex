@@ -57,14 +57,14 @@ public class UploadCSV extends Action
                     String Server = localMachine.getHostName();
                     Server = Server.substring(0, 5);
                     try {
-                        final String path = "/opt/hmcs/data/ubi/files/" + file.getFileName().toUpperCase();
+                        final String path = "/opt/hmcs/data/ubi/files/UBI_DATA.csv";
                         //System.out.println(">>>>>>>>>>>>>><<<<<<<<<<<<"+path);
                         FileUtility.SaveFile(path, file);
                         request.setAttribute("uploaded", "yes");
                         Path obj = new Path();
                         obj.setPath_id(1);
                        // System.out.println(">>>>>>>>>>>>>><<<<<<<<<<<<"+obj.getPath_id());
-                        obj.setFile_path(file.getFileName());
+                        obj.setFile_path("UBI_DATA.csv");
                         //System.out.println(">>>>>>>>>>>>>><<<<<<<<<<<<"+obj.getFile_path());
                         session.beginTransaction();
                         session.save((Object)obj);

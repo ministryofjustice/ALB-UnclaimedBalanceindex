@@ -5,6 +5,7 @@
 package com.MOJICT.UBI.Util;
 
 import sun.misc.BASE64Encoder;
+
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest;
@@ -32,10 +33,15 @@ public final class PasswordService
         return hash;
     }
 
-    public static synchronized PasswordService getInstance() {
+    public static synchronized PasswordService getInstance() throws Exception {
         if (PasswordService.instance == null) {
             PasswordService.instance = new PasswordService();
+            System.out.println(PasswordService.instance.encrypt("Lat!tude632"));
         }
         return PasswordService.instance;
+    }
+    public static void main(String args[]) throws Exception
+    {
+    	PasswordService.getInstance();
     }
 }

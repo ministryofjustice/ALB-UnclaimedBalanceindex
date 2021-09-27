@@ -56,7 +56,7 @@ public class dumpDatabase extends Action
             try {
                 final Path objPath = (Path)session.get(Path.class, (Serializable)1);
                 final ServletContext context = this.servlet.getServletContext();
-                final String FILE_PATH = "/opt/hmcs/data/ubi/files/" + objPath.getFile_path();
+                final String FILE_PATH = "/opt/hmcs/data/ubi/files/UBI_DATA.csv";
                 System.out.println(FILE_PATH);
                 final CSVReader reader = new CSVReader(new FileReader(FILE_PATH));
                 Data obj = null;

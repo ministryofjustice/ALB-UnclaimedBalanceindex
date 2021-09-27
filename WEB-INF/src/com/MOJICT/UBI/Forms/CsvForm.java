@@ -7,7 +7,7 @@ package com.MOJICT.UBI.Forms;
 import org.apache.struts.upload.FormFile;
 import org.apache.struts.action.ActionForm;
 
-public class CsvForm extends ActionForm
+public class CsvForm extends org.apache.struts.validator.ValidatorForm 
 {
     private FormFile thefile;
 

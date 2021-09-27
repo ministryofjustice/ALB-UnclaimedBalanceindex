@@ -6,7 +6,7 @@ package com.MOJICT.UBI.Forms;
 
 import org.apache.struts.action.ActionForm;
 
-public class DataForm extends ActionForm
+public class DataForm extends org.apache.struts.validator.ValidatorForm 
 {
     private String case_number;
     private String name;
