@@ -18,35 +18,34 @@
 						<p class="govuk-body">Please note the more information completed the narrower the results will be"</p>
 					</div>
 					
-					<logic:present name="yearError" scope="request">
-					<div class="errorm">
-						<p><strong>Error : "To Year" must be greater than "From Year" </strong></p>
-					</div>
-					</logic:present>
-					
-					<logic:present name="dateError" scope="request">
-					<div class="errorm">
-						<p><strong>Error : Invalid date</strong></p>
-					</div>
-					</logic:present>
-					
-					<logic:present name="fieldError" scope="request">
-					<div class="errorm">
-						<p><strong>Error : Search cannot be blank</strong></p>
-					</div>
-					</logic:present>
+					<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+					  <h2 class="govuk-error-summary__title" id="error-summary-title">
+					    There is a problem
+					  </h2>
+					  <div class="govuk-error-summary__body">
+    					<ul class="govuk-list govuk-error-summary__list">
+							<logic:present name="yearError" scope="request">
+								<li>"To Year" must be greater than "From Year"</li>
+							</logic:present>
+							
+							<logic:present name="dateError" scope="request">
+							<li>Invalid date</li>
+							</logic:present>
+							
+							<logic:present name="fieldError" scope="request">
+							<li><a href="#">Search cannot be blank</li>
+							</logic:present>
 
-					<logic:present name="invalidError" scope="request">
-					<div class="errorm">
-						<p><strong>Error : Invalid case name / case number</strong></p>
+							<logic:present name="invalidError" scope="request">
+							<li>Invalid case name / case number</li>
+							</logic:present>
+						
+							<logic:present name="requiredError" scope="request">
+							<li>Case name is mandatory field</li>
+							</logic:present>
+							</ul>
+						</div>
 					</div>
-					</logic:present>
-				
-					<logic:present name="requiredError" scope="request">
-					<div class="errorm">
-						<p><strong>Error : Case name is mandatory field</strong></p>
-					</div>
-					</logic:present>
 
 					<div class="govuk-grid-row">
 						<div class="govuk-grid-column-two-thirds">
