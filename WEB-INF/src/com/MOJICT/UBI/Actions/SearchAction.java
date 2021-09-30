@@ -91,7 +91,7 @@ public class SearchAction extends Action
                 return mapping.findForward("failure");
             }
             qry = session.createQuery(this.strQry);
-            qry.setString("name", name);
+            qry.setString("searchname", name);
             qry.setString("case_number", case_number);
             
             logger.info(this.strQry);

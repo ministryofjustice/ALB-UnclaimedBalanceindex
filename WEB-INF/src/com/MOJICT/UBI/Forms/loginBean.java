@@ -4,8 +4,12 @@
 
 package com.MOJICT.UBI.Forms;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts.upload.FormFile;
+import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
 
 public class loginBean extends org.apache.struts.validator.ValidatorForm 
 {
@@ -63,4 +67,9 @@ public class loginBean extends org.apache.struts.validator.ValidatorForm
     public void setUser_id(final int user_id) {
         this.user_id = user_id;
     }
+    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
+    	ActionErrors errors = new ActionErrors();
+    	
+    	return errors;
+    	}
 }

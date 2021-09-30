@@ -36,7 +36,7 @@ public final class PasswordService
     public static synchronized PasswordService getInstance() throws Exception {
         if (PasswordService.instance == null) {
             PasswordService.instance = new PasswordService();
-            System.out.println(PasswordService.instance.encrypt("Lat!tude632"));
+            System.out.println(PasswordService.instance.encrypt("xxxx"));
         }
         return PasswordService.instance;
     }
