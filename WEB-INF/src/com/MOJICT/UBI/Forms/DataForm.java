@@ -4,9 +4,13 @@
 
 package com.MOJICT.UBI.Forms;
 
-import org.apache.struts.action.ActionForm;
+import javax.servlet.http.HttpServletRequest;
 
-public class DataForm extends ActionForm
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+
+public class DataForm extends org.apache.struts.validator.ValidatorForm 
 {
     private String case_number;
     private String name;
@@ -80,4 +84,9 @@ public class DataForm extends ActionForm
     public void setTo_year(final String to_year) {
         this.to_year = to_year;
     }
+    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
+    	ActionErrors errors = new ActionErrors();
+    	
+    	return errors;
+    	}
 }

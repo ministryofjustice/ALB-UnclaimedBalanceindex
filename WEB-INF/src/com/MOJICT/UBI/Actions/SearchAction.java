@@ -55,18 +55,21 @@ public class SearchAction extends Action
         Query qry = null;
         this.strQry = "from Data data where ";
         this.dateFlag = false;
+        
         try {
             DataForm frm = (DataForm)form;
             //factory = (SessionFactory)this.servlet.getServletContext().getAttribute(HibernatePlugin.KEY_NAME);
             factory = DBConnection.getDBConnection();
             session = (Session)factory.openSession();
+            String name=frm.getName().trim().toLowerCase();
+            String case_number=frm.getCase_number().trim();
 
             String msg = "";
             if (frm.getName().trim() == null || frm.getName().trim().equals("")) {
                 msg = "required";
             }
             else {
-                msg = this.validateform(frm);
+                msg.equals(this.validateform(frm));
             }
             if (msg != "") {
                 if (msg.equals("date")) {
@@ -88,6 +91,9 @@ public class SearchAction extends Action
                 return mapping.findForward("failure");
             }
             qry = session.createQuery(this.strQry);
+            qry.setString("searchname", name);
+            qry.setString("case_number", case_number);
+            
             logger.info(this.strQry);
             if (this.dateFlag) {
                 final int frm_year = Integer.parseInt(frm.getFrom_year()) + 2000;
@@ -121,9 +127,12 @@ public class SearchAction extends Action
     private String validateform(final DataForm frm) {
         String errMsg = "";
         this.flag = false;
+        String name=frm.getName().trim().toLowerCase();
+        String case_number=frm.getCase_number().trim();
         if (frm.getName().trim() != null && !frm.getName().trim().equals("")) {
             if (Validator.IsValidName(frm.getName())) {
-                this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like '%" + frm.getName().trim().toLowerCase() + "%' OR lower(data.credit_detail) like '%" + frm.getName().trim().toLowerCase() + "%' )";
+                //this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like '%" +  + "%' OR lower(data.credit_detail) like '%" + frm.getName().trim().toLowerCase() + "%' )";
+            	this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like '%:searchname %' OR lower(data.credit_detail) like '% :searchname %' )";
                 this.flag = true;
             }
             else {
@@ -133,10 +142,10 @@ public class SearchAction extends Action
         if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
             if (Validator.IsValidNumber(frm.getCase_number())) {
                 if (this.flag) {
-                    this.strQry = String.valueOf(this.strQry) + "and data.case_number like '%" + frm.getCase_number().trim() + "%' ";
+                    this.strQry = String.valueOf(this.strQry) + "and data.case_number like '% :case_number %' ";
                 }
                 else {
-                    this.strQry = String.valueOf(this.strQry) + "data.case_number like '" + frm.getCase_number().trim() + "%' ";
+                    this.strQry = String.valueOf(this.strQry) + "data.case_number like '% :case_number %' ";
                 }
                 this.flag = true;
             }
