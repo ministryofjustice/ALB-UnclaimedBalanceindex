@@ -2,50 +2,33 @@
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 
-<div id="Content">
-						<div class="holder">
-							<div class="steps">
-								<h2>Case Detail</h2>
-							</div>
-						
-						<logic:present name="detail" scope="request">
-							
-							<div class="formwrap"> <span class="tl"></span> <span class="tr"><span></span></span>
-								<h3></h3>
-								<div class="formcon">
-									
-									<dl>
-										<dt><span>Account Number</span></dt>
-										<dd><bean:write name="detail" property="case_number" /></dd>
-										<dt><span>Year Carried Over</span></dt>
-										<dd><bean:write name="detail" property="year_carried" /></dd>
-										<dt><span>Case Name</span></dt>
-										<dd><bean:write name="detail" property="prime_index" /></dd>
-										<dt><span>Date Account Opened</span></dt>
-										<dd><bean:write name="detail" property="date_account" /></dd>
-										<dt><span>Credit Details</span></dt>
-										<dd>
-										<script>
-											var test = new Object();
-											test.credit_details="<bean:write name="detail" property="credit_detail" />";
-											var str=test.credit_details;
-										 	document.write(str.replace("?","&pound;"));
-										</script>
-									</dl>
-								</div>
-							
-							</logic:present>
-								<span class="bl"></span> <span class="br"></span> </div>
-							
-							
-							<div class="submitc">
-								<div class="function previous"> <span class="tl"></span> <span class="tr"><span></span></span>
-									<a href="javascript:history.go(-1)">Previous page</a> 
-									<span class="bl"></span> <span class="br"></span> </div>
-								
-							</div>
-							
-						</div>
-						
-						</div>
-			
+			<h1 class="govuk-heading-xl"><bean:write name="detail" property="case_number" /> - <bean:write name="detail" property="prime_index" /></h1>
+
+			<logic:present name="detail" scope="request">
+			<dl class="govuk-summary-list">
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Account Number</dt>
+					<dd class="govuk-summary-list__value"><bean:write name="detail" property="case_number" /></dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Year Carried Over</dt>
+					<dd class="govuk-summary-list__value"><bean:write name="detail" property="year_carried" /></dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Case Name</dt>
+					<dd class="govuk-summary-list__value"><bean:write name="detail" property="prime_index" /></dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Date Account Opened</dt>
+					<dd class="govuk-summary-list__value"><bean:write name="detail" property="date_account" /></dd>
+				</div>
+				<div class="govuk-summary-list__row">
+					<dt class="govuk-summary-list__key">Credit Details</dt>
+					<dd class="govuk-summary-list__value" id="credit-details">??<bean:write name="detail" property="credit_detail" /></dd>
+				</div>
+				<script type="text/javascript">
+					var creditDetailsDD = document.getElementById("credit-details");						
+					creditDetailsDD.innerHTML = creditDetailsDD.innerHTML.replace(/\?/,/\&pound\;/g);
+				</script>
+			</dl>
+	   </logic:present>		
