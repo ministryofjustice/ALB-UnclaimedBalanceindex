@@ -3,6 +3,8 @@
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 
+			<a href="javascript:history.go(-1)" styleClass="govuk-back-link">Back</a>	
+
 			<h1 class="govuk-heading-xl">Unclaimed Balance Index</h1>
 			<div id="Content">
 				<div class="holder">
