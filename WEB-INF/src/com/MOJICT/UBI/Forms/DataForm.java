@@ -84,9 +84,5 @@ public class DataForm extends org.apache.struts.validator.ValidatorForm
     public void setTo_year(final String to_year) {
         this.to_year = to_year;
     }
-    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
-    	ActionErrors errors = new ActionErrors();
-    	
-    	return errors;
-    	}
+    
 }
