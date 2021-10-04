@@ -1,7 +1,7 @@
 version: 0.1
 environment_variables:
   plaintext:
-    APPNAME: "ubi"
+    APPNAME: "ubi-reskin"
 phases:
   install:
     commands:
