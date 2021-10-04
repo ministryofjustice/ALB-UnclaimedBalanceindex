@@ -91,8 +91,8 @@ public class SearchAction extends Action
                 return mapping.findForward("failure");
             }
             qry = session.createQuery(this.strQry);
-            qry.setString("searchname", name);
-            qry.setString("case_number", case_number);
+            qry.setString("searchname", "%"+name+"%");
+            qry.setString("case_number", "%"+case_number+"%");
             
             logger.info(this.strQry);
             if (this.dateFlag) {
@@ -132,7 +132,7 @@ public class SearchAction extends Action
         if (frm.getName().trim() != null && !frm.getName().trim().equals("")) {
             if (Validator.IsValidName(frm.getName())) {
                 //this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like '%" +  + "%' OR lower(data.credit_detail) like '%" + frm.getName().trim().toLowerCase() + "%' )";
-            	this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like '%:searchname %' OR lower(data.credit_detail) like '% :searchname %' )";
+            	this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like :searchname OR lower(data.credit_detail) like :searchname)";
                 this.flag = true;
             }
             else {
@@ -142,10 +142,10 @@ public class SearchAction extends Action
         if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
             if (Validator.IsValidNumber(frm.getCase_number())) {
                 if (this.flag) {
-                    this.strQry = String.valueOf(this.strQry) + "and data.case_number like '% :case_number %' ";
+                    this.strQry = String.valueOf(this.strQry) + "and data.case_number like :case_number ";
                 }
                 else {
-                    this.strQry = String.valueOf(this.strQry) + "data.case_number like '% :case_number %' ";
+                    this.strQry = String.valueOf(this.strQry) + "data.case_number like :case_number";
                 }
                 this.flag = true;
             }
