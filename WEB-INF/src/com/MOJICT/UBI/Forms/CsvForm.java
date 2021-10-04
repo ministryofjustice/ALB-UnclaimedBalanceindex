@@ -11,7 +11,7 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 
-public class CsvForm extends org.apache.struts.validator.ValidatorForm 
+public class CsvForm extends ActionForm 
 {
     private FormFile thefile;
 
@@ -22,9 +22,5 @@ public class CsvForm extends org.apache.struts.validator.ValidatorForm
     public void setThefile(final FormFile thefile) {
         this.thefile = thefile;
     }
-    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
-    	ActionErrors errors = new ActionErrors();
-    	
-    	return errors;
-    	}
+    
 }

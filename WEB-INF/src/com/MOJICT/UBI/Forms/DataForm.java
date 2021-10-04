@@ -10,7 +10,7 @@ import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 
-public class DataForm extends org.apache.struts.validator.ValidatorForm 
+public class DataForm extends ActionForm
 {
     private String case_number;
     private String name;
@@ -84,5 +84,5 @@ public class DataForm extends org.apache.struts.validator.ValidatorForm
     public void setTo_year(final String to_year) {
         this.to_year = to_year;
     }
-    
+   
 }
