@@ -92,7 +92,11 @@ public class SearchAction extends Action
             }
             qry = session.createQuery(this.strQry);
             qry.setString("searchname", "%"+name+"%");
+            if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
+                if (Validator.IsValidNumber(frm.getCase_number())) {
             qry.setString("case_number", "%"+case_number+"%");
+                }
+                }
             
             logger.info(this.strQry);
             if (this.dateFlag) {
