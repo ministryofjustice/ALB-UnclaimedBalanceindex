@@ -4,11 +4,12 @@
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%@ page buffer = "32kb" %>
 
-			<a href="javascript:history.go(-1)" styleClass="govuk-back-link">Back</a>							
+			<a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>							
 
-			<h1 class="govuk-heading-xl">Search Results</h2>
+			<h1 class="govuk-heading-xl">Search Results</h1>
 
 				<logic:present name="search"> 
+					<!-- Note - this doesn't do anything but not removed in case it works in future. Styled(Jav) -->
 					<h2 class="govuk-heading-m">You searched for <bean:write name="search" filter="false"/></h2>
 				</logic:present>
 
@@ -23,7 +24,7 @@
 					</display:table>
 										       
 				</logic:present>
-				<logic:notPresent name="resultss">
+				<logic:notPresent name="results">
 					<p class="govuk-body">No results found</p>
 				</logic:notPresent>
 									 
