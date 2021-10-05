@@ -18,7 +18,7 @@
 							
 							</logic:present>
 							
-							<html:form  action="validateLogin.do">
+							<html:form  action="validateLogin.do" method="get">
 								<div class="formwrap"> <span class="tl"></span> <span class="tr"><span></span></span>
 									<div class="formcon">
 										<div class="formblock contact first">
