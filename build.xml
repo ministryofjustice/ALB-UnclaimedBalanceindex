@@ -348,10 +348,12 @@
 				<include name="tiles/**" />
 				<include name="images/**" />
 				<include name="accessibility.htm" />
-								<include name="accessibility_welsh.htm" />
+			        <include name="accessibility_welsh.htm" />
 				<include name="log4j.properties" />
-								<include name="licence.txt" />
-								
+				<include name="licence.txt" />
+                                <include name="stylesheets/**" />
+				<include name="assets/**" />
+				<include name="javascript/**"/>
 			    <include name="directGov/**"/>
 				<exclude name="WEB-INF/**/*.class" />
 			</fileset>
