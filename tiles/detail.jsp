@@ -2,6 +2,8 @@
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 
+			<a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+			
 			<h1 class="govuk-heading-xl"><bean:write name="detail" property="case_number" /> - <bean:write name="detail" property="prime_index" /></h1>
 
 			<logic:present name="detail" scope="request">
@@ -26,9 +28,5 @@
 					<dt class="govuk-summary-list__key">Credit Details</dt>
 					<dd class="govuk-summary-list__value" id="credit-details">??<bean:write name="detail" property="credit_detail" /></dd>
 				</div>
-				<script type="text/javascript">
-					var creditDetailsDD = document.getElementById("credit-details");						
-					creditDetailsDD.innerHTML = creditDetailsDD.innerHTML.replace(/\?/,/\&pound\;/g);
-				</script>
 			</dl>
 	   </logic:present>		
