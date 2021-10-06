@@ -43,8 +43,15 @@
 				type="com.MOJICT.UBI.Actions.ValidateAdminLoginAction"
 				name="loginForm" 
 				scope="request" >
+				<forward name="success" path="service.definition"></forward>
+  			<forward name="failure" path="/adminLogin.do"></forward>
+  		  </action>
+		  <action input="login.definition" path="/pingdomLogin" 
+				type="com.MOJICT.UBI.Actions.Pingdomalert"
+				name="loginForm" 
+				scope="request" >
   			
-  			<forward name="success" path="service.definition"></forward>
+  			<forward name="success" path="search.definition"></forward>
   			<forward name="failure" path="/adminLogin.do"></forward>
   		  </action>
   		  
