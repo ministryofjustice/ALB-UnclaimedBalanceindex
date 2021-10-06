@@ -6,7 +6,7 @@
 
 			<logic:present name="detail" scope="request">
 			
-			<h1 class="govuk-heading-xl"><bean:write name="detail" property="case_number" /> - <bean:write name="detail" property="prime_index" /></h1>
+			<h1 class="govuk-heading-xl">Account details</h1>
 
 			<dl class="govuk-summary-list">
 				<div class="govuk-summary-list__row">
@@ -33,7 +33,7 @@
 
 	   <details class="govuk-details" data-module="govuk-details">
 		  <summary class="govuk-details__summary">
-		    <h2 class="govuk-details__summary-text">What happens next?</h2>
+		    <h2 class="govuk-details__summary-text">What happens next</h2>
 		  </summary>
 		  <div class="govuk-details__text">
 		  	<h3 class="govuk-heading-s">Provide any further information you know</h3>
