@@ -44,15 +44,16 @@ public class Pingdomalert extends Action
 		//factory = (SessionFactory)this.servlet.getServletContext().getAttribute(HibernatePlugin.KEY_NAME);
             session = (Session)factory.openSession();
             frm = (loginBean)form;
-           final Query qry = session.createQuery("from UserBean usr where usr.login_name= ?");
-            qry.setString(0, frm.getLogin_name());
+           final Query qry = session.createQuery("from UserBean usr");
+           
             final List lst = qry.list();
             if (!lst.isEmpty()) {
                 final UserBean usr = (UserBean) lst.get(0);
                 RETURN = "success";
             }
             else {
-                errMsg = "Username / password is invalid.";
+                errMsg = "Database connection can not be established";
+                request.setAttribute("DBError", errMsg);
                 RETURN = "failure";
             }
         }

@@ -46,13 +46,13 @@
 				<forward name="success" path="service.definition"></forward>
   			<forward name="failure" path="/adminLogin.do"></forward>
   		  </action>
-		  <action input="login.definition" path="/pingdomLogin" 
+		  <action input="login.definition" path="/healthcheck" 
 				type="com.MOJICT.UBI.Actions.Pingdomalert"
 				name="loginForm" 
 				scope="request" >
   			
-  			<forward name="success" path="search.definition"></forward>
-  			<forward name="failure" path="/adminLogin.do"></forward>
+  			<forward name="success" path="pingdom.definition"></forward>
+  			<forward name="failure" path="/error.jsp"></forward>
   		  </action>
   		  
   		  <action input="service.definition" path="/fileUpload" 
