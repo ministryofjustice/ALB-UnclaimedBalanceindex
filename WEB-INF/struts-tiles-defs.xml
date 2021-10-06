@@ -14,6 +14,9 @@
 <definition name="search.definition" extends="base.definition">
 <put name="content" value="/tiles/search.jsp" />
 </definition>
+<definition name="pingdom.definition" extends="base.definition">
+<put name="content" value="/tiles/alert_success.jsp" />
+</definition>
 
 <definition name="result.definition" extends="base.definition">
 <put name="content" value="/tiles/results.jsp" />
