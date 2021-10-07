@@ -13,6 +13,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import com.MOJICT.UBI.Beans.UserBean;
+import com.MOJICT.UBI.Util.BCrypt;
 import com.MOJICT.UBI.Util.DBConnection;
 import com.MOJICT.UBI.Util.PasswordService;
 import com.MOJICT.UBI.Forms.loginBean;
@@ -54,7 +55,10 @@ public class ValidateAdminLoginAction extends Action
             final List lst = qry.list();
             if (!lst.isEmpty()) {
                 final UserBean usr = (UserBean) lst.get(0);
-                if (usr.getPassword().equals(pwd)) {
+               // BCrypt.checkpw(frm.getPassword(), usr.getPassword());
+               // if (usr.getPassword().equals(pwd)) 
+                if(BCrypt.checkpw(frm.getPassword(), usr.getPassword()))
+                {
                     RETURN = "success";
                     request.getSession().setAttribute("user_id", (Object)usr.getUser_id());
                 }
