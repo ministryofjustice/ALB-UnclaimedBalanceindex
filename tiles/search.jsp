@@ -40,7 +40,7 @@
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-two-thirds">
 					<p class="govuk-body">Start by searching one keyword. The more specific you are, the greater the chance of getting no results.</p>
-					<html:form  styleClass="accessible" action="searchResults.do" method="get">
+					<html:form  styleClass="accessible" action="searchResults.do" method="get" styleId="js-search-form">
 						<div class="govuk-form-group">
 							<label class="govuk-label" for="phrase">Keyword</label>
 							<div class="govuk-hint">For example, name, location, case type or organisation</div>
@@ -52,7 +52,7 @@
 							<html:text styleId="accountNo" property="case_number" styleClass="govuk-input"/>
 						</div>
 						
-						<h2 class="govuk-heading-m">Search a date range</h2>
+						<h2 class="govuk-heading-m">Search a date range (optional)</h2>
 						<div class="govuk-form-group">
 						  <fieldset class="govuk-fieldset" role="group">
 						    <legend class="govuk-fieldset__legend">
@@ -65,19 +65,19 @@
 						          <label class="govuk-label govuk-date-input__label" for="dayFrom">
 						            Day
 						          </label>
-											<html:text styleId="dayFrom" property="from_day" styleClass="govuk-input govuk-date-input__input govuk-input--width-2"></html:text>
+											<html:text styleId="dayFrom" property="from_day" styleClass="js-zero-fill govuk-input govuk-date-input__input govuk-input--width-2"></html:text>
 										</div>
 									</div>
 									<div class="govuk-date-input__item">
 						        <div class="govuk-form-group">
 						          <label class="govuk-label govuk-date-input__label"  for="monthFrom">Month</label>
-											<html:text styleId="monthFrom" property="from_month" styleClass="govuk-input govuk-date-input__input govuk-input--width-2"></html:text>
+											<html:text styleId="monthFrom" property="from_month" styleClass="js-zero-fill govuk-input govuk-date-input__input govuk-input--width-2"></html:text>
 										</div>
 									</div>
 									<div class="govuk-date-input__item">
 						        <div class="govuk-form-group">
 						          <label class="govuk-label govuk-date-input__label" for="yearFrom">Year</label>
-											<html:text styleId="yearFrom" property="from_year" styleClass="govuk-input govuk-date-input__input govuk-input--width-4"></html:text>
+											<html:text styleId="yearFrom" property="from_year" styleClass="js-zero-fill govuk-input govuk-date-input__input govuk-input--width-4"></html:text>
 										</div>
 									</div>
 								</div>
@@ -91,19 +91,19 @@
 					      	<div class="govuk-date-input__item">
 						        <div class="govuk-form-group">
 						          <label class="govuk-label govuk-date-input__label" for="dayTo">Day</label>
-											<html:text styleId="dayTo" property="to_day" styleClass="govuk-input govuk-date-input__input govuk-input--width-2"></html:text>
+											<html:text styleId="dayTo" property="to_day" styleClass="js-zero-fill govuk-input govuk-date-input__input govuk-input--width-2"></html:text>
 										</div>
 									</div>
 									<div class="govuk-date-input__item">
 						        <div class="govuk-form-group">
 						          <label class="govuk-label govuk-date-input__label"  for="monthTo">Month</label>
-											<html:text styleId="monthTo" property="to_month" styleClass="govuk-input govuk-date-input__input govuk-input--width-2"></html:text>
+											<html:text styleId="monthTo" property="to_month" styleClass="js-zero-fill govuk-input govuk-date-input__input govuk-input--width-2"></html:text>
 										</div>
 									</div>
 									<div class="govuk-date-input__item">
 						        <div class="govuk-form-group">
 						          <label class="govuk-label govuk-date-input__label" for="yearTo">Year</label>
-											<html:text styleId="yearTo" property="to_year" styleClass="govuk-input govuk-date-input__input govuk-input--width-4"></html:text>
+											<html:text styleId="yearTo" property="to_year" styleClass="js-zero-fill govuk-input govuk-date-input__input govuk-input--width-4"></html:text>
 										</div>
 									</div>
 								</div><!-- /date-input -->
