@@ -9,8 +9,8 @@
    <param-name>scui-suppress-user-level-sessiontimeout-override</param-name>
    <param-value>y</param-value>
 </context-param>
-	<session-config> 
-<session-timeout><timeout_value_in_minutes></session-timeout> 
+<session-config> 
+	<session-timeout>30</session-timeout> 
 </session-config> 
   <!-- Standard Action Servlet Configuration (with debugging) --> 
 <error-page>
