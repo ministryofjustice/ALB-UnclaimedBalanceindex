@@ -7,26 +7,28 @@
 			<logic:present name="detail" scope="request">
 			
 			<h1 class="govuk-heading-xl">Account details</h1>
-
+			<p class="govuk-body">
+				<a class="govuk-button" href="javascript:window.print()">Print account details</a>
+			</p>
 			<dl class="govuk-summary-list">
 				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Account Number</dt>
+					<dt class="govuk-summary-list__key">Account number</dt>
 					<dd class="govuk-summary-list__value"><bean:write name="detail" property="case_number" /></dd>
 				</div>
 				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Year Carried Over</dt>
+					<dt class="govuk-summary-list__key">Year carried over</dt>
 					<dd class="govuk-summary-list__value"><bean:write name="detail" property="year_carried" /></dd>
 				</div>
 				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Case Name</dt>
+					<dt class="govuk-summary-list__key">Case name</dt>
 					<dd class="govuk-summary-list__value"><bean:write name="detail" property="prime_index" /></dd>
 				</div>
 				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Date Account Opened</dt>
+					<dt class="govuk-summary-list__key">Date account opened</dt>
 					<dd class="govuk-summary-list__value"><bean:write name="detail" property="date_account" /></dd>
 				</div>
 				<div class="govuk-summary-list__row">
-					<dt class="govuk-summary-list__key">Credit Details</dt>
+					<dt class="govuk-summary-list__key">Credit details</dt>
 					<dd class="govuk-summary-list__value" id="credit-details">??<bean:write name="detail" property="credit_detail" /></dd>
 				</div>
 			</dl>
