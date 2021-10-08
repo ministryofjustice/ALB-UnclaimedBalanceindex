@@ -1,3 +1,7 @@
 /* Overrides to design system - so when upgrading, leave this file as is */
 .govuk-error-summary__list li { color: #d4351c; font-weight: bold; }
 h2.govuk-details__summary-text { font-size: 1.2rem; font-weight: normal; display: inline; margin: 0; padding: 0}
+
+@media print {
+	header, footer, .govuk-phase-banner, .govuk-back-link { display: none; }
+}
