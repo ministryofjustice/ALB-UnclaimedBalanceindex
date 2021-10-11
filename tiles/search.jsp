@@ -6,9 +6,8 @@
 			<a href="https://www.gov.uk/find-court-money" class="govuk-back-link">Back</a>	
 
 			<h1 class="govuk-heading-xl">Search</h1>
-<logic:present name="requiredError" scope="request">
-</logic:present>
-			<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+<logic:present name="genericerror" scope="request">
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
 			  <h2 class="govuk-error-summary__title" id="error-summary-title">
 			    There is a problem
 			  </h2>
@@ -36,6 +35,8 @@
 					</ul>
 				</div>
 			</div>
+</logic:present>
+			
 
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-two-thirds">

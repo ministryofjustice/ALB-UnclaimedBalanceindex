@@ -7,8 +7,13 @@
 
 <!-- Base Tiles Definition--> 
 <definition name="base.definition" path="/tiles/base-layout.jsp">
-<put name="title" value="Variable Paragraphs" />
+<put name="title" value="UBI" />
 </definition> 
+
+
+<definition name="error.definition" extends="base.definition">
+<put name="content" value="/tiles/error.jsp" />
+</definition>
 
 
 <definition name="search.definition" extends="base.definition">
@@ -17,6 +22,7 @@
 <definition name="pingdom.definition" extends="base.definition">
 <put name="content" value="/tiles/alert_success.jsp" />
 </definition>
+
 
 <definition name="result.definition" extends="base.definition">
 <put name="content" value="/tiles/results.jsp" />
