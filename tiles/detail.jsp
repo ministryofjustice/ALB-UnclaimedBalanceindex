@@ -29,7 +29,7 @@
 				</div>
 				<div class="govuk-summary-list__row">
 					<dt class="govuk-summary-list__key">Credit details</dt>
-					<dd class="govuk-summary-list__value" id="credit-details">??<bean:write name="detail" property="credit_detail" /></dd>
+					<dd class="govuk-summary-list__value" id="credit-details"><bean:write name="detail" property="credit_detail" /></dd>
 				</div>
 			</dl>
 
