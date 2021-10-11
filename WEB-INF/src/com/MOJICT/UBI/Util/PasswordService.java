@@ -15,22 +15,13 @@ public final class PasswordService
     private static PasswordService instance;
 
     public synchronized String encrypt(final String plaintext) throws Exception {
-        MessageDigest md = null;
-        try {
-            md = MessageDigest.getInstance("SHA");
-        }
-        catch (NoSuchAlgorithmException e) {
-            throw new Exception(e.getMessage());
-        }
-        try {
-            md.update(plaintext.getBytes("UTF-8"));
-        }
-        catch (UnsupportedEncodingException e2) {
-            throw new Exception(e2.getMessage());
-        }
-        final byte[] raw = md.digest();
-        final String hash = new BASE64Encoder().encode(raw);
-        return hash;
+    	String  originalPassword = plaintext;
+		String generatedSecuredPasswordHash = BCrypt.hashpw(originalPassword, BCrypt.gensalt(12));
+		//System.out.println(generatedSecuredPasswordHash);
+		
+		//boolean matched = BCrypt.checkpw(originalPassword, generatedSecuredPasswordHash);
+		//System.out.println(matched);
+		return generatedSecuredPasswordHash;
     }
 
     public static synchronized PasswordService getInstance() throws Exception {
