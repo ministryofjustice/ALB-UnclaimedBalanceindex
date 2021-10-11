@@ -64,26 +64,38 @@ public class SearchAction extends Action
             String msg = "";
             if (frm.getName().trim() == null || frm.getName().trim().equals("")) {
                 msg = "required";
+                
             }
             else {
                 msg = this.validateform(frm);
             }
+            String genericerror="";
             if (msg != "") {
                 if (msg.equals("date")) {
-                    request.setAttribute("dateError", (Object)"date");
+                    genericerror=genericerror+"dateerror";
+                    request.setAttribute("genericerror", genericerror);
+                	request.setAttribute("dateError", (Object)"date");
                 }
                 else if (msg.equals("year")) {
+                	genericerror=genericerror+"yearerror";
+                	request.setAttribute("genericerror", genericerror);
                     request.setAttribute("yearError", (Object)"year");
                 }
                 else if (msg.equals("invalid")) {
+                	genericerror=genericerror+"invalidError";
+                	request.setAttribute("genericerror", genericerror);
                     request.setAttribute("invalidError", (Object)"invalid");
                 }
                 else if (msg.equals("required")) {
+                	genericerror=genericerror+"requirederror";
+                	request.setAttribute("genericerror", genericerror);
                     request.setAttribute("requiredError", (Object)"required");
                 }
                 return mapping.findForward("failure");
             }
             if (!this.flag) {
+            	genericerror=genericerror+"fielderror";
+            	request.setAttribute("genericerror", genericerror);
                 request.setAttribute("fieldError", (Object)"fieldError");
                 return mapping.findForward("failure");
             }
