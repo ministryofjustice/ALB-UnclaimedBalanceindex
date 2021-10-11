@@ -11,9 +11,7 @@
 </definition> 
 
 
-<definition name="error.definition" extends="base.definition">
-<put name="content" value="/tiles/error.jsp" />
-</definition>
+
 
 
 <definition name="search.definition" extends="base.definition">
