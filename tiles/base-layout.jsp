@@ -10,12 +10,12 @@
 <head>
     <meta charset="utf-8">
 	  <title>Court Funds Office</title>
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="mask-icon" href="./assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/govuk-apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="./assets/images/govuk-apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/images/govuk-apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" href="./assets/images/govuk-apple-touch-icon.png">
 
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -35,8 +35,8 @@
     <meta name="DC.format" content="Text/HTML" /> 
     <meta name="DC.language" content="eng" /> 
     <meta name="DC.rights.copyright" content="Crown Copyright" /> 
-    <link rel="stylesheet" href="/stylesheets/govuk-frontend-3.13.1.min.css">
-    <link rel="stylesheet" href="/stylesheets/ubi-specific.css">
+    <link rel="stylesheet" href="./stylesheets/govuk-frontend-3.13.1.min.css">
+    <link rel="stylesheet" href="./stylesheets/ubi-specific.css">
 </head>
 
 <body class="govuk-template__body ">

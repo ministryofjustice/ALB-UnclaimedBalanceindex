@@ -36,7 +36,7 @@
 		   
 		   <action input="result.definition" path="/getDetail" type="com.MOJICT.UBI.Actions.DetailAction" scope="request">
 		   <forward name="success" path="detail.definition"></forward>
-		   <forward name="failure" path="/error.jsp"></forward>
+		   <forward name="failure" path="error.definition"></forward>
 		   </action>   		
 		      		
       		<action input="login.definition" path="/validateLogin" 
