@@ -19,6 +19,9 @@
 </definition>
 
 
+<definition name="homepage.definition" extends="base.definition">
+<put name="content" value="/tiles/homepage.jsp" />
+</definition>
 <definition name="result.definition" extends="base.definition">
 <put name="content" value="/tiles/results.jsp" />
 </definition>

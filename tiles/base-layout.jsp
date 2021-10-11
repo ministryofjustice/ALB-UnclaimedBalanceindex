@@ -121,7 +121,7 @@
     </div>
   </footer>		
 
-  <script src="/javascript/govuk-frontend-3.13.1.min.js"></script>
+  <script src="./javascript/govuk-frontend-3.13.1.min.js"></script>
     <script>
       window.GOVUKFrontend.initAll()
   </script>
@@ -135,6 +135,6 @@
     ga('send', 'pageview');
 
   </script>
-  <script src="/javascript/ubi-specific.js"></script>
+  <script src="./javascript/ubi-specific.js"></script>
 </body>
 </html>
