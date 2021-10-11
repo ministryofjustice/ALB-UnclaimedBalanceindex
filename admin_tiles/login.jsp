@@ -20,12 +20,12 @@
 			
 			<html:form  action="validateLogin.do">
 				<div class="govuk-form-group">	
-					<label for="words" class="govuk-label">Login name</label>
-					<html:text property="login_name" styleClass="govuk-input"/>
+					<label for="username" class="govuk-label">Login name</label>
+					<html:text property="login_name" styleClass="govuk-input" styleId="username"/>
 				</div>
 				<div class="govuk-form-group">
-					<label for="phrase" class="govuk-label">Password</label>
-					<html:password property="password" styleClass="govuk-input"></html:password>
+					<label for="password" class="govuk-label">Password</label>
+					<html:password property="password" styleClass="govuk-input" styleId="password"></html:password>
 				</div>
-					<html:submit styleClass="govuk-button">Login </html:submit>
+				<html:submit styleClass="govuk-button">Login </html:submit>
 			</html:form>
