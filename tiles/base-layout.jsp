@@ -110,7 +110,6 @@
           </div>
             <style>
               .banner { border: 4px solid #d4351c; width: 80%; margin-left: 1em; margin-bottom: 1rem; }
-              .banner h2 { background: rgb(29, 112, 184); color: white; font-size: 15px; padding: 1rem; margin: 0; }
               .banner p { padding: 1rem; margin-bottom:0; }
             </style>
 
