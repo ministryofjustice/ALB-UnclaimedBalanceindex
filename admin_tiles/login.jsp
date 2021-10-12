@@ -3,7 +3,7 @@
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 					
-			<h1 class="govuk-heading-xl">Admin Login</h1>
+			<h1 class="govuk-heading-xl">Admin login</h1>
 		
 			<logic:present name="errMsg" scope="request">
 			<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
