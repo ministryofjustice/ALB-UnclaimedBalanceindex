@@ -15,37 +15,37 @@
 
 
 <definition name="search.definition" extends="base.definition">
-<put name="title" type="string" value="Search for Unclaimed Indexes" />
+<put name="title" type="string" value="Search - Find unclaimed court money" />
 <put name="content" value="/tiles/search.jsp" />
 </definition>
 
 
 <definition name="homepage.definition" extends="base.definition">
-<put name="title" type="string" value="Homepage" />
+<put name="title" type="string" value="Find unclaimed court money" />
 <put name="content" value="/tiles/homepage.jsp" />
 </definition>
 <definition name="result.definition" extends="base.definition">
-<put name="title" type="string" value="Result for the search conducted" />
+<put name="title" type="string" value="Search results - Find unclaimed court money" />
 <put name="content" value="/tiles/results.jsp" />
 </definition>
 
 <definition name="detail.definition" extends="base.definition">
-<put name="title" type="string" value="Case Details page" />
+<put name="title" type="string" value="Account details - Find unclaimed court money" />
 <put name="content" value="/tiles/detail.jsp" />
 </definition>
 
 <definition name="login.definition" extends="base.definition">
-<put name="title" type="string" value="Admin Login " />
+<put name="title" type="string" value="Admin Login - Find unclaimed court money" />
 <put name="content" value="/admin_tiles/login.jsp" />
 </definition>
 
 <definition name="service.definition" extends="base.definition">
-<put name="title" type="string" value="UBI" />
+<put name="title" type="string" value="Upload CSV - Find unclaimed court money" />
 <put name="content" value="/admin_tiles/services.jsp" />
 </definition>
 
 <definition name="upload.definition" extends="base.definition">
-<put name="title" type="string" value="Upload UBI file" />
+<put name="title" type="string" value="Inject data - Find unclaimed court money" />
 <put name="content" value="/admin_tiles/upload.jsp" />
 </definition>
 
