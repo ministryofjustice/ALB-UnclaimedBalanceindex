@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta charset="utf-8">
-      <title>Accessibility statement - Find unclaimed court money</title>
+      <title>Sorry, there is a problem with this page - Find unclaimed court money</title>
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="mask-icon" href="./assets/images/govuk-mask-icon.svg" color="#0b0c0c">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/govuk-apple-touch-icon-180x180.png">
@@ -71,7 +71,7 @@
      
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-			<h1 class="govuk-heading-l">Sorry, there has been a problem</h1>
+			<h1 class="govuk-heading-l">Sorry, there is a problem with this page</h1>
 					
 			<p class="govuk-body">We are sorry but there is a problem with this page. Please tell us about it and we will fix it.</p>
 			<p class="govuk-body">To find what you're looking for:</p>
