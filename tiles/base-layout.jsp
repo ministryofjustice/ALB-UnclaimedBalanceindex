@@ -103,7 +103,15 @@
 						</div>
 						</div>
 
-         
+          <div class="banner">
+		        <p>We're currently working to update and improve this service. 
+             <!--  We've updated and improved this service. Your feedback will help us to improve it. -->
+            </p>
+          </div>
+            <style>
+              .banner { border: 4px solid #d4351c; width: 80%; margin-left: 1em; margin-bottom: 1rem; }
+              .banner p { padding: 1rem; margin-bottom:0; }
+            </style>
 
 					     <tiles:insert attribute="content" />
 
