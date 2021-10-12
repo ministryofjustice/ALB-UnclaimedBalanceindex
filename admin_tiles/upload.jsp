@@ -6,12 +6,12 @@
 					
 			<logic:present name="user_id" scope="session">
 				<a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
-				<h1 class="govuk-heading-xl">Find unclaimed court money administration</h1><
+				<h1 class="govuk-heading-xl">Inject data</h1>
 				
 				<logic:present name="errMsg" scope="request">
 				<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
 				  <h2 class="govuk-error-summary__title" id="error-summary-title">
-				    There is a problem
+				    Status:
 				  </h2>
 					<div class="govuk-error-summary__body">
 		    		<ul class="govuk-list govuk-error-summary__list">

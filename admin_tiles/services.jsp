@@ -5,7 +5,7 @@
 					
 			<logic:present name="user_id" scope="session">	
 				<a href="logOff.do" class="govuk-back-link">Log out</a> 
-				<h1 class="govuk-heading-xl">Find unclaimed court money administration</h1>
+				<h1 class="govuk-heading-xl">Upload CSV</h1>
 			<logic:present name="errMsg" scope="request">
 				<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
 				  <h2 class="govuk-error-summary__title" id="error-summary-title">
