@@ -7,7 +7,7 @@
 
 <!-- Base Tiles Definition--> 
 <definition name="base.definition" path="/tiles/base-layout.jsp">
-<put name="title" type="string" value="Search for Unclaimed Indexes" />
+<put name="title" type="string" value="Find unclaimed court money" />
 </definition> 
 
 
