@@ -103,7 +103,7 @@
 						</div>
 						</div>
 
-          <div class="banner" style="border-color:#d4351c">
+          <div class="banner">
 		        <p>We're currently working to update and improve this service. 
              <!--  We've updated and improved this service. Your feedback will help us to improve it. -->
             </p>
