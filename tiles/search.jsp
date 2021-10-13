@@ -3,7 +3,7 @@
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 
-			<a href="https://www.gov.uk/find-court-money" class="govuk-back-link">Back</a>	
+			<a href="./" class="govuk-back-link">Back</a>	
 
 			<h1 class="govuk-heading-xl">Search for unclaimed court money</h1>
 <logic:present name="genericerror" scope="request">
