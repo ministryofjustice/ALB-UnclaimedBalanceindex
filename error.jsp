@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta charset="utf-8">
-      <title>Sorry, there is a problem with this page - Find unclaimed court money</title>
+      <title>Sorry, there is a problem with the service - Find unclaimed court money - GOV.UK</title>
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="mask-icon" href="./assets/images/govuk-mask-icon.svg" color="#0b0c0c">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/govuk-apple-touch-icon-180x180.png">
@@ -71,22 +71,10 @@
      
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-			<h1 class="govuk-heading-l">Sorry, there is a problem with this page</h1>
-					
-			<p class="govuk-body">We are sorry but there is a problem with this page. Please tell us about it and we will fix it.</p>
-			<p class="govuk-body">To find what you're looking for:</p>
-			<ul class="govuk-list govuk-list--bullet">
-				<li>type the subject you want into the search box</li>
-				<li>try the site index link</li>
-				<li>use one of the links to the main sections of the site</li>
-			</ul>
-			<p class="govuk-body">Please tell us about this error by emailing us at the address below:</p><p class="govuk-body">Court Funds Office: <a class="govuk-link" href="mailto:enquiries@courtfunds.gsi.gov.uk">general enquiries email</a></p>
-			<p class="govuk-body">Court Funds Office<br>22 Kingsway<br>London<br>WC2B 6LE</p>
-			<p class="govuk-body">DX: 149780 Kingsway 5</p>
-			<p class="govuk-body">Customer Service Helpline: 0845 223 8500</p>
-			<p class="govuk-body">Textphone for the deaf or hard of hearing: 020 7947 7911
-			<p class="govuk-body">Fax: 020 7947 7967</p>
-			<p class="govuk-body">Our Customer Services Helpline is open from 9am to 5pm, Monday to Friday (except for public holidays). Our business hours are from 9am till 5pm</p>
+			<h1 class="govuk-heading-l">Sorry, there is a problem with the service</h1>
+			<p class="govuk-body">Try again later.</p>
+			<p class="govuk-body">You can <a href="mailto:dex-engage@ministryofjustice.zendesk.com" class="govuk-link">contact the web team</a> to tell us about this problem.</p>
+			<p class="govuk-body">Or, <a href="https://www.gov.uk/contact-court-funds-office" class="govuk-link">contact the Courts Funds Office</a> if you need to speak to someone about unclaimed court money.</p>
     </main>
   </div>
 

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta charset="utf-8">
-      <title>Accessibility statement - Find unclaimed court money - GOV.UK</title>
+    <title>Page not found - Find unclaimed court money - GOV.UK</title>
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="mask-icon" href="./assets/images/govuk-mask-icon.svg" color="#0b0c0c">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/govuk-apple-touch-icon-180x180.png">
@@ -66,60 +66,16 @@
           </span>
           </div>  
     </div>
-  </div>                       
-                
+  </div>
      
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-        <a href="/" class="govuk-back-link">Back</a>
-        <h1 class="govuk-heading-xl">Accessibility statement for Find unclaimed court money</h1>
-
-        <p class="govuk-body">This accessibility statement applies to the Find unclaimed court money service. The service begins after you click <a class="govuk-link" href="/">Search online for unclaimed court accounts</a> from the <a href="https://www.gov.uk/find-court-money">Find and claim money in a court account page</a>.</p>
-        <p class="govuk-body">The service provides a database search to check whether you are entitled to any unclaimed funds at court.</p>
-        <p class="govuk-body">This website is run by the Ministry of Justice. We want as many people as possible to be able to use this website. For example, that means you should be able to:</p>
-        <ul class="govuk-list govuk-list--bullet">
-            <li>resize text without assistive technology up to 200 percent without loss of content or functionality</li>
-            <li>zoom in up to 300 percent without the text spilling off the screen
-            <li>navigate most of the website using just a keyboard</li>
-            <li>navigate most of the website using speech recognition software</li>
-            <li>listen to most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)</li>
-        </ul>
-        <p class="govuk-body">We&rsquo;ve also made the website text as simple as possible to understand.</p>
-        <p class="govuk-body"><a class="govuk-link" href="https://mcmw.abilitynet.org.uk/">AbilityNet</a> has advice on making your device easier to use if you have a disability.</p>
-        
-        <h2 class="govuk-heading-m">How accessible this website is</h2>
-        <p class="govuk-body">This website is compliant with the <a class="govuk-link" href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines version 2.1</a> AA standard</p>
-        
-        <h2 class="govuk-heading-m">Reporting accessibility problems with this website</h2>
-        <p class="govuk-body">If you find any problems not listed on this page or think we&rsquo;re not meeting accessibility requirements, contact:</p>
-        <p class="govuk-body"><a class="govuk-link" href="mailto:DEX-Engage@digital.justice.gov.uk">DEX-Engage@digital.justice.gov.uk</a></p>
-        
-        <h2 class="govuk-heading-m">Enforcement procedure</h2>
-        <p class="govuk-body">The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the &lsquo;accessibility regulations&rsquo;). If you&rsquo;re not happy with how we respond to your complaint, <a class="govuk-link" href="https://www.equalityadvisoryservice.com/">contact the Equality Advisory and Support Service (EASS)</a>.</p>
-        
-        <h2 class="govuk-heading-m">Contacting us by phone or visiting us in person.</h2>
-        <p class="govuk-body">If you need information on this website in a different format like accessible PDF, large print, easy read, audio recording or braille;</p>
-        <ul class="govuk-list govuk-list--bullet">
-            <li>Email the Court Funds Office at <a class="govuk-link" href="mailto:enquiries@cfo.gov.uk">enquiries@cfo.gov.uk</a></li>
-            <li>Telephone: 0300 0200 199 Monday to Friday, 9am to 5pm</li>
-            <li>You can also write to: Court Funds Office, Sunderland, SR43 3AB</li>
-        </ul>
-
-        <h2 class="govuk-heading-m">Technical information about this website&rsquo;s accessibility</h2>
-        <p class="govuk-body">The Ministry of Justice is committed to making its website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
-        
-        <h2 class="govuk-heading-m">Compliance status</h2>
-        <p class="govuk-body">This website is compliant with the <a class="govuk-link" href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines version 2.1</a> AA standard</p>
-        
-        <h2  class="govuk-heading-m">How we tested this website</h2>
-        <p class="govuk-body">This website was last tested on 5 October 2021. The test was carried out by a member of the MoJ&rsquo;s Digital &amp; Technology team.</p>
-        
-        <h2  class="govuk-heading-m">Preparation of this accessibility statement</h2>
-        <p class="govuk-body">This statement was prepared on 2 August 2021. It was last reviewed on 4th October 2021.</p>
-
+			<h1 class="govuk-heading-l">Page not found</h1>
+			<p class="govuk-body">If you typed the web address, check it is correct.</p>
+      <p class="govuk-body">If you pasted the web address, check you copied the entire address.</p>
+      <p class="govuk-body">If the web address is correct or you selected a link or button, <a href="https://www.gov.uk/contact-court-funds-office" class="govuk-link">contact the Courts Funds Office</a> if you need to speak to someone about unclaimed court money.</p>	
     </main>
   </div>
-
     
   <footer class="govuk-footer " role="contentinfo">
     <div class="govuk-width-container ">
