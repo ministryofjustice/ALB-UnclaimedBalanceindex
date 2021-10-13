@@ -5,7 +5,7 @@
 
 			<a href="https://www.gov.uk/find-court-money" class="govuk-back-link">Back</a>	
 
-			<h1 class="govuk-heading-xl">Search</h1>
+			<h1 class="govuk-heading-xl">Search for unclaimed court money</h1>
 <logic:present name="genericerror" scope="request">
 <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
 			  <h2 class="govuk-error-summary__title" id="error-summary-title">
@@ -44,22 +44,22 @@
 					<html:form  styleClass="accessible" action="searchResults.do" method="get" styleId="js-search-form">
 						<div class="govuk-form-group">
 							<label class="govuk-label" for="phrase">Keyword</label>
-							<div class="govuk-hint">For example, name, location, case type or organisation</div>
+							<div class="govuk-hint">For example, name, location, case type or organisation.</div>
 							<html:text styleId="phrase" property="name" styleClass="govuk-input"></html:text>
 						</div>			
 						<div class="govuk-form-group">
 							<label for="accountNo" class="govuk-label">Court account number (optional)</label>
-							<div class="govuk-hint">This has 9 characters, for example, 2789123P</div>
+							<div class="govuk-hint">This has 9 characters, for example, 2789123P.</div>
 							<html:text styleId="accountNo" property="case_number" styleClass="govuk-input"/>
 						</div>
 						
-						<h2 class="govuk-heading-m">Search a date range (optional)</h2>
+						<p class="govuk-body">Search a date range (optional)</p>
 						<div class="govuk-form-group">
 						  <fieldset class="govuk-fieldset" role="group">
 						    <legend class="govuk-fieldset__legend">
 						    	Date from:
 						    </legend>
-								<div class="govuk-hint">For example, 27 3 2018</div>
+								<div class="govuk-hint">For example, 27 3 2018.</div>
 								<div class="govuk-date-input">
 					      	<div class="govuk-date-input__item">
 						        <div class="govuk-form-group">
@@ -87,7 +87,7 @@
 						<div class="govuk-form-group">
 							<fieldset class="govuk-fieldset" role="group">
 						    <legend class="govuk-fieldset__legend">Date to:</legend>
-								<div class="govuk-hint">For example, 27 3 2021</div>
+								<div class="govuk-hint">For example, 27 3 2021.</div>
 								<div class="govuk-date-input">
 					      	<div class="govuk-date-input__item">
 						        <div class="govuk-form-group">
