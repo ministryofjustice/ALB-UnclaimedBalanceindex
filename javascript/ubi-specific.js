@@ -35,7 +35,7 @@ var stylingGDS = {
 		if(paginationTitle)paginationTitle.parentNode.removeChild(paginationTitle);
 		var pageLinksHolder = byClass('pagelinks')[0];
 		if(pageLinksHolder) pageLinksHolder.className = 'govuk-body';
-		var pageLinks = pageLinksHolder.getElementsByClassName('a');
+		var pageLinks = pageLinksHolder.getElementsByTagName('a');
 		for(var link of pageLinks) link.className = 'govuk-link';
 	}
 };
