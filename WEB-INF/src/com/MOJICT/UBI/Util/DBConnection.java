@@ -28,6 +28,7 @@ public class DBConnection {
         cfg.setProperty("connection.driver_class","org.postgresql.Driver");
         cfg.setProperty("hibernate.connection.username", dbUser);
         cfg.setProperty("hibernate.connection.password", dbPass);
+        cfg.setProperty("javax.persistence.query.timeout","200000");
         //cfg.setProperty("hibernate.hbm2ddl.auto", "update");
         cfg.setProperty("show_sql", "false");
         //cfg.setProperty("hibernate.connection.pool_size", "1");
