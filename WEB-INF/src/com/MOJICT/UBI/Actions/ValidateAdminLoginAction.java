@@ -75,9 +75,14 @@ public class ValidateAdminLoginAction extends Action
             factory.close();
             return mapping.findForward("failure");
         }
+        finally
+        {
+		 session.clear();
+             session.close();
+             factory.close();
+        }
         frm = null;
-        session.close();
-        factory.close();
+        
         request.setAttribute("errMsg", (Object)errMsg);
         return mapping.findForward(RETURN);
     }

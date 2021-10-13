@@ -91,7 +91,8 @@ public class SearchAction extends Action
                 return mapping.findForward("failure");
             }
             qry = session.createQuery(this.strQry);
-            qry.setString("searchname", "%"+name+"%");
+            name=name.replace("&","\\&").replace("'","\\'");
+            qry.setString("searchname", ("%"+name+"%").toLowerCase());
             if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
                 if (Validator.IsValidNumber(frm.getCase_number())) {
             qry.setString("case_number", "%"+case_number+"%");
