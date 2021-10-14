@@ -75,7 +75,13 @@
   			<forward name="failure" path="upload.definition"></forward>
   			<forward name="session" path="login.definition"></forward>
   			
-  		  </action>		  
+  		  </action>	
+  		  <action path="/homepage" 
+				type="com.MOJICT.UBI.Actions.UserLogOffAction"
+				scope="request" >
+  			
+  			<forward name="success" path="homepage.definition"></forward>
+  		  </action>	  
   		  
   		  <action path="/logOff" 
 				type="com.MOJICT.UBI.Actions.UserLogOffAction"
