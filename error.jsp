@@ -89,9 +89,6 @@
               <a class="govuk-footer__link" href="./accessibility.htm">Accessibility statement</a>
             </li>
             <li class="govuk-footer__inline-list-item">
-              <a class="govuk-footer__link" href="./accessibility_welsh.htm">Accessibility statement - Cymraeg</a>
-            </li>
-            <li class="govuk-footer__inline-list-item">
               <a class="govuk-footer__link" href="https://www.gov.uk/help">Help</a>
             </li>
             <li class="govuk-footer__inline-list-item">
