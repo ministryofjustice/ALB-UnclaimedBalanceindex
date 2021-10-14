@@ -21,7 +21,7 @@
           </svg></a>
 
 					<h2 class="govuk-heading-m">Before you start</h2>
-					<p class="govuk-body">If you can't use the digital service, you can call the Court Funds Office Helpline on <span style="white-space:nowrap;">0300 0200 199</span>.</p>
+					<p class="govuk-body">If you can't use the digital service, you can call the Court Funds Office Helpline on <span class="nowrap">0300 0200 199</span>.</p>
 				</div><!-- /column-two-thirds -->
 				<div class="govuk-grid-column-one-third">
 					<aside class="related-items" role="complementary">

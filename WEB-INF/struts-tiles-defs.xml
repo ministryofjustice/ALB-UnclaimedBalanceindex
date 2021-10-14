@@ -35,7 +35,7 @@
 </definition>
 
 <definition name="login.definition" extends="base.definition">
-<put name="title" type="string" value="Admin Login - Find unclaimed court money - GOV.UK" />
+<put name="title" type="string" value="Admin login - Find unclaimed court money - GOV.UK" />
 <put name="content" value="/admin_tiles/login.jsp" />
 </definition>
 
