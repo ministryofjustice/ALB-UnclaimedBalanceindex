@@ -1,2 +1,2 @@
 <%@ page language="java" %>
-<jsp:forward page="search.do"></jsp:forward>
+<jsp:forward page="/homepage.do"></jsp:forward>
