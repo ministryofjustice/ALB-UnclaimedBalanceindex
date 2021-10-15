@@ -44,7 +44,7 @@ var stylingGDS = {
 		var pageLinksHolder = byClass('pagelinks')[0];
 		if(pageLinksHolder) pageLinksHolder.className = 'govuk-body';
 		var pageLinks = pageLinksHolder.getElementsByTagName('a');
-		for(var link of pageLinks) link.className = 'govuk-link';
+		for(var i=0;i<pageLinks.length;i++) pageLinks[i].className = 'govuk-link';
 	}
 };
 stylingGDS.init();
