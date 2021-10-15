@@ -17,7 +17,14 @@ var stylingGDS = {
 		}
 	}
 	,styleResultsTable: function() { 
-		var table = elem('result'); if(!table)return;
+		var table = elem('result'); if(!table) { // no results so rid CSV button
+			var resultArea = elem('js-results-table');
+			if(!resultArea)return;
+			var csvButton = resultArea.getElementsByClassName('govuk-button')[0];
+			if(!csvButton)return;
+			csvButton.parentNode.removeChild(csvButton);
+			return;
+		}
 		var tableTags = function(tagName) { return table.getElementsByTagName(tagName); };
 		var headers = tableTags('th');
 		for(var i=0;i<headers.length;i++)	headers[i].className='govuk-table__header';

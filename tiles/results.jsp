@@ -25,9 +25,6 @@
 					</display:table>
 										       
 				</logic:present>
-				<logic:notPresent name="results">
-					<p class="govuk-body">No results found</p>
-				</logic:notPresent>
 			</section><!-- /js-results-table -->
 									 
 
