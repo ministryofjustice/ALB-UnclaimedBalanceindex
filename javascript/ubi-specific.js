@@ -17,7 +17,8 @@ var stylingGDS = {
 		}
 	}
 	,styleResultsTable: function() { 
-		var table = elem('result'); if(!table) { // no results so rid CSV button
+		var table = elem('result'); 
+		if(!table) { // no results so rid CSV button
 			var resultArea = elem('js-results-table');
 			if(!resultArea)return;
 			var csvButton = resultArea.getElementsByClassName('govuk-button')[0];
