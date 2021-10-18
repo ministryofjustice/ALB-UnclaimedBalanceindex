@@ -49,7 +49,7 @@
 						</div>			
 						<div class="govuk-form-group">
 							<label for="accountNo" class="govuk-label">Court account number (optional)</label>
-							<div class="govuk-hint">This has 9 characters, for example, 2789123P.</div>
+							<div class="govuk-hint">This has 9 characters, for example, 27891231P.</div>
 							<html:text styleId="accountNo" property="case_number" styleClass="govuk-input"/>
 						</div>
 						

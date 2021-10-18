@@ -52,7 +52,7 @@
 				<h3 class="govuk-heading-s">Show evidence you're entitled to claim</h3>
 				<p class="govuk-body">We need evidence that the money could belong to you, someone you're responsible for or are representing. This could be copies of:</p>
 				<ul class="govuk-list govuk-list--bullet">
-					<li><a class="govuk-link" href="https://www.gov.uk/wills-probate-inheritance/searching-for-probate-records">will or grant of administration</li>
+					<li><a class="govuk-link" href="https://www.gov.uk/wills-probate-inheritance/searching-for-probate-records">will or grant of administration</a></li>
 					<li><a class="govuk-link" href="https://www.gov.uk/order-copy-birth-death-marriage-certificate">birth, death or marriage certificates</a></li>
 					<li><a class="govuk-link" href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/census-records/">census record</a></li>
 					<li>a court order (the court that issued it can provide a copy)</li>
