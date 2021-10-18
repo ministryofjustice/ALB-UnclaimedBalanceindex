@@ -7,34 +7,48 @@
 
 <!-- Base Tiles Definition--> 
 <definition name="base.definition" path="/tiles/base-layout.jsp">
-<put name="title" value="Variable Paragraphs" />
+<put name="title" type="string" value="Find unclaimed court money - GOV.UK" />
 </definition> 
 
 
+
+
+
 <definition name="search.definition" extends="base.definition">
+<put name="title" type="string" value="Search - Find unclaimed court money - GOV.UK" />
 <put name="content" value="/tiles/search.jsp" />
 </definition>
 <definition name="pingdom.definition" extends="base.definition">
 <put name="content" value="/tiles/alert_success.jsp" />
 </definition>
 
+
+<definition name="homepage.definition" extends="base.definition">
+<put name="title" type="string" value="Find unclaimed court money - GOV.UK" />
+<put name="content" value="/tiles/homepage.jsp" />
+</definition>
 <definition name="result.definition" extends="base.definition">
+<put name="title" type="string" value="Search results - Find unclaimed court money - GOV.UK" />
 <put name="content" value="/tiles/results.jsp" />
 </definition>
 
 <definition name="detail.definition" extends="base.definition">
+<put name="title" type="string" value="Account details - Find unclaimed court money - GOV.UK" />
 <put name="content" value="/tiles/detail.jsp" />
 </definition>
 
 <definition name="login.definition" extends="base.definition">
+<put name="title" type="string" value="Admin login - Find unclaimed court money - GOV.UK" />
 <put name="content" value="/admin_tiles/login.jsp" />
 </definition>
 
 <definition name="service.definition" extends="base.definition">
+<put name="title" type="string" value="Upload CSV - Find unclaimed court money - GOV.UK" />
 <put name="content" value="/admin_tiles/services.jsp" />
 </definition>
 
 <definition name="upload.definition" extends="base.definition">
+<put name="title" type="string" value="Inject data - Find unclaimed court money - GOV.UK" />
 <put name="content" value="/admin_tiles/upload.jsp" />
 </definition>
 

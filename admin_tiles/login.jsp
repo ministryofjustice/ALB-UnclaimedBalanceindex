@@ -3,59 +3,29 @@
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 					
-					
-					<div id="Content">
-					
-						<div class="holder">
-							<div class="steps">
-								<h2>Admin Login</h2>
-							</div>
-							
-							<logic:present name="errMsg" scope="request">
-							<div class="errorm">
-								<p><strong><bean:write name="errMsg" /></strong></p>
-							</div>
-							
-							</logic:present>
-							
-							<html:form  action="validateLogin.do" method="get">
-								<div class="formwrap"> <span class="tl"></span> <span class="tr"><span></span></span>
-									<div class="formcon">
-										<div class="formblock contact first">
-											<fieldset>
-											<legend><span></span></legend>
-											<div>
-												<div class="odd">
-													<label for="words"><span>Login name</span></label>
-												</div>
-												<div class="even">
-													<html:text property="login_name"/>
-												</div>
-											</div>
-											<div>
-												<div class="odd">
-													<label for="phrase"><span>Password</span></label>
-												</div>
-												<div class="even">
-													<html:password property="password"></html:password>
-												</div>
-											</div>
-											</fieldset>
-										</div>
-										
-								</div>
-									<span class="bl"></span> <span class="br"></span> </div>
-								<div class="submitc">
-									<div class="function next right"> <span class="tl"></span> <span class="tr"><span></span></span> <html:submit>Login </html:submit> <span class="bl"></span> <span class="br"></span> </div>
-								</div>
-							</html:form>
-						</div>
-					</div>
-					<div id="RHC">
+			<h1 class="govuk-heading-xl">Admin login</h1>
+		
+			<logic:present name="errMsg" scope="request">
+			<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+			  <h2 class="govuk-error-summary__title" id="error-summary-title">
+			    There is a problem
+			  </h2>
+				<div class="govuk-error-summary__body">
+	    		<ul class="govuk-list govuk-error-summary__list">
+						<li><bean:write name="errMsg" /></li>
+					</ul>
 				</div>
 			</div>
-	
-			<div id="LHC">
-				<div class="holder"> </div>
-			</div>
-		</div>
+			</logic:present>
+			
+			<html:form  action="validateLogin.do">
+				<div class="govuk-form-group">	
+					<label for="username" class="govuk-label">Login name</label>
+					<html:text property="login_name" styleClass="govuk-input" styleId="username"/>
+				</div>
+				<div class="govuk-form-group">
+					<label for="password" class="govuk-label">Password</label>
+					<html:password property="password" styleClass="govuk-input" styleId="password"></html:password>
+				</div>
+				<html:submit styleClass="govuk-button">Login </html:submit>
+			</html:form>
