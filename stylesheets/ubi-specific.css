@@ -5,5 +5,5 @@ h2.govuk-details__summary-text { font-size: 1.2rem; font-weight: normal; display
 .related-items { padding-top: 10px; border-top:  2px solid #1d70b8 }
 #js-results-table { font-family: GDS Transport,arial,sans-serif; }
 @media print {
-	header, footer, .govuk-phase-banner, .govuk-back-link { display: none; }
+	header, footer, .govuk-phase-banner, .govuk-back-link, .govuk-button { display: none; }
 }
