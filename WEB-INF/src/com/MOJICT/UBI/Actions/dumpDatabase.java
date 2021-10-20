@@ -119,7 +119,8 @@ public class dumpDatabase extends Action
                 catch (Exception ex) {
                     ex.printStackTrace();
                     result = "an error has occured while reading file";
-
+                    System.out.println("coming here in error");
+                    return mapping.findForward("success");
                 }
 
                 session.getTransaction().commit();
@@ -127,6 +128,8 @@ public class dumpDatabase extends Action
                 session.clear();
                 session.close();
                 factory.close();
+                request.setAttribute("errMsg", (Object)result);
+                return mapping.findForward("success");
             }
             catch (FileNotFoundException e) {
                 result = "Cannot find UBI_DATA.CSV file";
@@ -134,7 +137,7 @@ public class dumpDatabase extends Action
             }
             finally
             {
-		 session.clear();
+            	 session.clear();
                  session.close();
                  factory.close();
             }
