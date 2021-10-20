@@ -5,10 +5,11 @@
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%@ taglib uri="/WEB-INF/struts-tiles.tld" prefix="tiles" %>
    <%
-		if(request.getRequestURL().toString().contains("https://ubi."))
+   		String oldurl="ubi.dev.wp.dsd.io";
+		if(request.getRequestURL().toString().contains(oldurl))
 		{
-			String oldurl="https://ubi.dev.wp.dsd.io/";
 			String newurl="https://find-unclaimed-court-money.service.justice.gov.uk/";
+			response.setStatus(302);
       		response.sendRedirect(newurl);    
 		}
 	%>
