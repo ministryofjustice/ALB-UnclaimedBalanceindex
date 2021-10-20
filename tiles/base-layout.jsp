@@ -5,7 +5,7 @@
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%@ taglib uri="/WEB-INF/struts-tiles.tld" prefix="tiles" %>
    <%
-   		String oldurl="localhost:8080/UBI";
+   		String oldurl="ubi.dev.wp.dsd.io";
 		if(request.getRequestURL().toString().contains(oldurl))
 		{
 			String newurl="https://find-unclaimed-court-money.service.justice.gov.uk/";
