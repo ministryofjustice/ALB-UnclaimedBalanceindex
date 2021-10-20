@@ -9,9 +9,6 @@ if(request.getRequestURL().toString().contains("https://ubi.dev.wp.dsd.io/"))
 {
 String oldurl="https://ubi.dev.wp.dsd.io/";
 String newurl="https://find-unclaimed-court-money.service.justice.gov.uk/";
-//String actionreq=request.getRequestURL().toString().substring(strQry.indexOf(oldurl));
-//System.out.println("true");
- //response.setStatus(302);
       response.sendRedirect(newurl);    
 }
 
