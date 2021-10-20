@@ -5,16 +5,12 @@
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <%@ taglib uri="/WEB-INF/struts-tiles.tld" prefix="tiles" %>
    <%
-if(request.getRequestURL().toString().contains("https://ubi.courtfunds.gov.uk/"))
-{
-String oldurl="https://ubi.dev.wp.dsd.io/";
-String newurl="https://find-unclaimed-court-money.service.justice.gov.uk/";
-//String actionreq=request.getRequestURL().toString().substring(strQry.indexOf(oldurl));
-//System.out.println("true");
- //response.setStatus(302);
-      response.sendRedirect(newurl);    
-}
-
+		if(request.getRequestURL().toString().contains("https://ubi."))
+		{
+			String oldurl="https://ubi.dev.wp.dsd.io/";
+			String newurl="https://find-unclaimed-court-money.service.justice.gov.uk/";
+      		response.sendRedirect(newurl);    
+		}
 	%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
