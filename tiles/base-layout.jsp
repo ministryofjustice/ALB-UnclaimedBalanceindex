@@ -78,7 +78,7 @@
           <strong class="govuk-tag govuk-phase-banner__content__tag">FEEDBACK</strong>
           <span class="govuk-phase-banner__text">
             <!-- We're currently working to update and improve this service.   -->
-            We've updated, improved and renamed the Unclaimed Balance Index service. Your <a  class="govuk-link" href="https://eu.surveymonkey.com/r/HBC3PDN">feedback</a> will help us to improve it.
+            We've updated, improved and renamed the Unclaimed Balance Index service. Your feedback will help us to improve it.
           </span>
         </p>
       </div>  
@@ -141,6 +141,17 @@
     ga('send', 'pageview');
 
   </script>
+  <!-- Hotjar Tracking Code for Unclaimed Balance Index: Production -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2546697,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
   <script src="./javascript/ubi-specific.js"></script>
 </body>
 </html>
