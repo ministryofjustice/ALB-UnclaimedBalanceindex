@@ -60,7 +60,7 @@
 				name="loginForm" 
 				scope="request" >
   			
-  			<forward name="success" path="/dumpdata"></forward>
+  			<forward name="success" path="/dumpdata.do"></forward>
   			<forward name="failure" path="service.definition"></forward>
   			<forward name="session" path="login.definition"></forward>
   			
