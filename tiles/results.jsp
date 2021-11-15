@@ -17,12 +17,27 @@
         <logic:present name="results">
 
 					<p class="govuk-body"><a class="govuk-button" href="downloadResults.do?name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Download results as CSV</a></p>
-					<display:table  id="result" name="requestScope.results" requestURI=""  pagesize="50" sort="list" class="govuk-table">
-		        <display:setProperty name="paging.banner.placement" value="bottom" />
-		    	    <display:column property="case_number" title="Account number" class="govuk-table__cell" />
-				    <display:column property="prime_index" title="Case name" paramId="case_id" paramProperty="case_number" href="getDetail.do" class="govuk-table__cell" />
-				    <display:column property="date_account" title="Date account opened" class="govuk-table__cell"/>
-					</display:table>
+					<tbody>
+						<logic:present name="result">
+						<tr>
+						     <td>Account number</td>
+						     <td>Case name</td>
+						     <td>Date account opened</td>
+						    
+						 </tr>
+						<logic:iterate id="bean" name="result">
+						   <tr>
+						     <td><bean:write name="bean" property="case_number"/></td>
+						     <td><bean:write name="bean" property="prime_index"/></td>
+						     <td><bean:write name="bean" property="date_account"/></td>
+						    
+						   </tr>
+						</logic:iterate>
+						</logic:present>
+					</tbody>
+											
+					
+					
 										       
 				</logic:present>
 			</section><!-- /js-results-table -->
