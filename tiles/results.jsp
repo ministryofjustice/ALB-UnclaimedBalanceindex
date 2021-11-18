@@ -25,7 +25,7 @@
 	                            List list;
 								
 								//int noOfPages=5;
-								String spageid=request.getParameter("page"); 
+								String spageid=request.getParameter("currentPage"); 
 								
 								System.out.println("no of pages"+currentPage+">>>"+noOfPages);
 								//request.set
@@ -75,13 +75,13 @@
 							 	<% currentPage=Integer.parseInt(request.getAttribute("currentPage").toString());
 							 	if(currentPage!=1)
 							 	{ %>
-							        <td><a href="searchResults.do?page=<%=(currentPage-1)%>&currentPage=<%=currentPage%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Previous</a></td>
+							        <td><a href="searchResults.do?currentPage=<%=(currentPage-1)%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Previous</a></td>
 							    <% }%>
 						        </tr>
 						 
 						    <%--For displaying Page numbers. 
     The when condition does not display a link for the current page--%>
-						    <table border="1" cellpadding="5" cellspacing="5">
+						    <table border="1" >
 						        <tr>
 
 						        	<% 
@@ -89,7 +89,7 @@
 						        	for(int i=1; i < noOfPages ; i++)
 						        	{ %>
 						                      
-						                       <td><a href="searchResults.do?page=<%=i%>&currentPage=<%=i%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">
+						                       <td><a href="searchResults.do?currentPage=<%=i%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">
 						                       	<%=i%></a></td>
 						            <%}%>
 						        </tr>
@@ -102,7 +102,7 @@
 						    currentPage=Integer.parseInt(request.getAttribute("currentPage").toString()); 
 						    if(currentPage < noOfPages1)
 							 	{ %>
-						        <td><a href="searchResults.do?page=<%=++currentPage%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Next</a></td>
+						        <td><a href="searchResults.do?currentPage=<%=++currentPage%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Next</a></td>
 						    <%}%>
 															
 						</table>
