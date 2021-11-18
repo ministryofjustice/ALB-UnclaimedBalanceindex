@@ -143,7 +143,13 @@
     <taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
     <taglib-location>/WEB-INF/tld/struts-bean.tld</taglib-location>
   </taglib>
- 
+ <taglib>
+
+    <taglib-uri>/WEB-INF/c.tld</taglib-uri>
+
+    <taglib-location>/WEB-INF/c.tld</taglib-location>
+
+  </taglib>
  
 </web-app>
 
