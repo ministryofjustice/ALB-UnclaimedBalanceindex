@@ -102,7 +102,7 @@ public class SearchAction extends Action
                 request.setAttribute("fieldError", (Object)"fieldError");
                 return mapping.findForward("failure");
             }
-            this.strQry=String.valueOf(this.strQry) +"order by date_search asc";
+            this.strQry=String.valueOf(this.strQry) +"order by date_search desc";
             qry = session.createQuery(this.strQry);
             qry.setString("searchname", "%"+name+"%");
             if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
