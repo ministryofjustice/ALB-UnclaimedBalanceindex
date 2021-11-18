@@ -102,6 +102,7 @@ public class SearchAction extends Action
                 request.setAttribute("fieldError", (Object)"fieldError");
                 return mapping.findForward("failure");
             }
+            this.strQry=String.valueOf(this.strQry) +"order by date_search asc";
             qry = session.createQuery(this.strQry);
             qry.setString("searchname", "%"+name+"%");
             if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
@@ -119,6 +120,7 @@ public class SearchAction extends Action
                 qry.setDate("from_date", (Date)myDate.String2Date(String.valueOf(frm.getFrom_day()) + "/" + frm.getFrom_month() + "/" + from_year));
                 qry.setDate("to_date", (Date)myDate.String2Date(String.valueOf(frm.getTo_day()) + "/" + frm.getTo_month() + "/" + to_year));
             }
+            
             arrResults = qry.list();
             frm = null;
             //qry.
