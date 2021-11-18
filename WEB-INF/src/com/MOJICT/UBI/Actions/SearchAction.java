@@ -103,6 +103,7 @@ public class SearchAction extends Action
                 request.setAttribute("fieldError", (Object)"fieldError");
                 return mapping.findForward("failure");
             }
+            this.strQry=String.valueOf(this.strQry) +"order by date_search desc";
             qry = session.createQuery(this.strQry);
             qry.setString("searchname", "%"+name+"%");
             if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
@@ -125,16 +126,31 @@ public class SearchAction extends Action
             frm = null;
             //qry.
             int noOfPages=arrResults.size()/50;
-            int page=1;
+            System.out.println(arrResults.size());
+            System.out.println(noOfPages);
+            int mod=arrResults.size()%50;
+            if(mod != 0)
+            {
+            	noOfPages=noOfPages+1;
+            }
+            int page=0;
+            if(request.getParameter("currentPage")==null)
+            {
+            	page=1;
+            }
+            else
+            {
+            page=Integer.parseInt(request.getParameter("currentPage"));
+            }
             request.setAttribute("results", (List)arrResults);
-            request.setAttribute("noOfPages", noOfPages);
+            request.setAttribute("noOfPages", ++noOfPages);
             request.setAttribute("currentPage", page);
 
         }
         catch (Exception ex) {
 
             request.setAttribute("results",  (List)arrResults);
-           logger.info("Its coming here in catch exception");
+          System.out.println("Its coming here in catch exception");
             ex.printStackTrace();
         }
         finally
