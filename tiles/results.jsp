@@ -17,7 +17,13 @@
 
 				<section id="js-results-table"><!-- required for styling using JavaScript (see ubi-specific.js) -->
        			 <logic:present name="results">
-	                     <%   List results= (List)request.getAttribute("results");
+	                     <%     
+
+	                            List results= (List)request.getAttribute("results");
+								
+								
+								
+
 								int total=50;  
 	                            int currentPage=Integer.parseInt(request.getAttribute("currentPage").toString());
 	                            int noOfPages=Integer.parseInt(request.getAttribute("noOfPages").toString());
@@ -41,7 +47,16 @@
 								    currentPage=pageid;
 								    pageid=pageid-1;  
 								    pageid=pageid*total+1;  
-								} 
+								}
+								if(results.size()== 0){
+								  list=results;
+								}
+								else if(results.size()<=50)
+								{
+									list=results.subList(pageid,results.size());
+								}
+								else
+								{
 								if(currentPage==noOfPages-1)
 								{
 								 list=results.subList(pageid,results.size());
@@ -49,8 +64,10 @@
 								else{
 								  list=results.subList(pageid,endpage);
 								}
+								}
 								request.setAttribute("List",list);
 								  request.setAttribute("results",results);
+							
 								
 						%>  
 					<p class="govuk-body"><a class="govuk-button" href="downloadResults.do?name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Download results as CSV</a></p>
@@ -79,7 +96,7 @@
 						        </tr>
 						 
 						    <%--For displaying Page numbers. 
-  								  The when condition does not display a link for the current page--%>
+    The when condition does not display a link for the current page--%>
 						    <table border="1" >
 						        <tr>
 
