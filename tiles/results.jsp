@@ -74,7 +74,7 @@
 			    <ul class="govuk-list">
 		    	<% // Previous
 		    	if(currentPage > 1) { %>
-		    	<li class="pag-prev"><a class="govuk-link" href="searchResults.do?currentPage=<%=++currentPage%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Previous</a></li>
+		    	<li class="pag-prev"><a class="govuk-link" href="searchResults.do?currentPage=<%=--currentPage%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Previous</a></li>
 
         	<% }
         	// Page numbers
