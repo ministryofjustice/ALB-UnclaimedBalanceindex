@@ -126,13 +126,14 @@ public class dumpDatabase extends Action
                 session.getTransaction().commit();
                 result = String.valueOf(number) + " Records added in database";
                 session.clear();
-                session.close();
-                factory.close();
+                //session.close();
+                //factory.close();
                 request.setAttribute("errMsg", (Object)result);
                 return mapping.findForward("success");
             }
-            catch (FileNotFoundException e) {
+            catch (Exception e) {
                 result = "Cannot find UBI_DATA.CSV file";
+                System.out.println("coming here in 2nd error");
                 e.printStackTrace();
             }
             finally
