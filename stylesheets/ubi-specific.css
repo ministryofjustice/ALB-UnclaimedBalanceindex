@@ -3,7 +3,19 @@
 h2.govuk-details__summary-text { font-size: 1.2rem; font-weight: normal; display: inline; margin: 0; padding: 0}
 .nowrap { white-space: nowrap; }
 .related-items { padding-top: 10px; border-top:  2px solid #1d70b8 }
-#js-results-table { font-family: GDS Transport,arial,sans-serif; }
+#js-results-table { font-family: GDS Transport,arial,sans-serif;}
+
+/* Pagination */
+#pagination ul { display: inline-block; vertical-align: middle; list-style:  none; margin:  50px 0; text-align: justify;}
+#pagination li { display: inline-block; }
+#pagination li.pag-prev a:before, #pagination li.pag-next a:after { display: inline-block; height: 10px; width: 10px; border-style: solid; color: #0b0c0c; background: transparent; -webkit-transform: rotate(
+-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); content: ""; }
+#pagination li.pag-prev a:before { border-width: 3px 0 0 3px; margin-right: 5px; }
+#pagination li.pag-next a:after { border-width: 0 3px 3px 0;margin-left: 5px; }
+#pagination a { min-width: 1.5em; margin: 0 10px; padding: 5px; }
+#pagination a.govuk-link[aria-current="true"]  { text-decoration: none; color: #0b0c0c; font-weight: bold; }
+/* End pagination */
+
 @media print {
-	header, footer, .govuk-phase-banner, .govuk-back-link, .govuk-button { display: none; }
+	header, footer, .govuk-phase-banner, .govuk-back-link, .govuk-button, #pagination { display: none; }
 }
