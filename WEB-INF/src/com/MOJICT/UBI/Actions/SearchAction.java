@@ -126,8 +126,6 @@ public class SearchAction extends Action
             frm = null;
             //qry.
             int noOfPages=arrResults.size()/50;
-            System.out.println(arrResults.size());
-            System.out.println(noOfPages);
             int mod=arrResults.size()%50;
             if(mod != 0)
             {
