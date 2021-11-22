@@ -2,7 +2,6 @@
 <%@ taglib uri="/WEB-INF/tld/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
-<%@ taglib uri="/WEB-INF/c.tld" prefix="c"%>
 <%@ page import="java.util.*" %>
 <%@ page buffer = "32kb" %>
 
@@ -80,7 +79,7 @@
 						        </tr>
 						 
 						    <%--For displaying Page numbers. 
-    The when condition does not display a link for the current page--%>
+  								  The when condition does not display a link for the current page--%>
 						    <table border="1" >
 						        <tr>
 
