@@ -62,11 +62,11 @@
 						</thead>
 						<tbody class="govuk-table__body">
 							<logic:iterate id="bean" name="List">
-						   <tr class="govuk-table__row">
-						     <td class="govuk-table__cell"><bean:write name="bean" property="case_number"/></td>
-						     <td class="govuk-table__cell"><a href="#" class="govuk-link"><bean:write name="bean" property="prime_index"/></a></td>
-						     <td class="govuk-table__cell"><bean:write name="bean" property="date_account"/></td>
-						   </tr>
+						  <tr class="govuk-table__row">
+								<td class="govuk-table__cell"><bean:write name="bean" property="case_number"/></td>
+								<td class="govuk-table__cell"><a aria-label="<bean:write name="bean" property="prime_index"/> account number <bean:write name="bean" property="case_number"/>"href="getDetail.do?case_id=<bean:write name="bean" property="case_number"/>" class="govuk-link"><bean:write name="bean" property="prime_index"/></a></td>
+								<td class="govuk-table__cell"><bean:write name="bean" property="date_account"/></td>
+						  </tr>
 							</logic:iterate>
 						</tbody>
 					</table>
@@ -98,3 +98,4 @@
 					<p class="govuk-body">No results found</p>
 				</logic:notPresent>
 			</section><!-- /results-table -->
+	
