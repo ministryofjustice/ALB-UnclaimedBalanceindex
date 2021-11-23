@@ -96,6 +96,6 @@
 				</logic:present>
 				<logic:present name="noresults">
 					<p class="govuk-body">No results found to dipslay</p>
-				</logic:Present>
+				</logic:present>
 			</section><!-- /results-table -->
 	
