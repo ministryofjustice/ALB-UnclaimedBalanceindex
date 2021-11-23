@@ -94,8 +94,8 @@
 						</ul>
 					</nav>													
 				</logic:present>
-				<logic:notPresent name="results">
-					<p class="govuk-body">No results found</p>
+				<logic:present name="noresults">
+					<p class="govuk-body">No results found to dipslay</p>
 				</logic:notPresent>
 			</section><!-- /results-table -->
 	

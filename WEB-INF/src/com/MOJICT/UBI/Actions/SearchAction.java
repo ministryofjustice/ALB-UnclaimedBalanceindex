@@ -125,6 +125,10 @@ public class SearchAction extends Action
            
             frm = null;
             //qry.
+            if(arrResults.size() == 0)
+            {
+            	request.setAttribute("noresults", (List)arrResults);
+            }
             int noOfPages=arrResults.size()/50;
             int mod=arrResults.size()%50;
             if(mod != 0)
