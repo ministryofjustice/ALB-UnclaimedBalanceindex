@@ -64,7 +64,7 @@
 							<logic:iterate id="bean" name="List">
 						  <tr class="govuk-table__row">
 								<td class="govuk-table__cell"><bean:write name="bean" property="case_number"/></td>
-								<td class="govuk-table__cell"><a aria-label="<bean:write name="bean" property="prime_index"/> account number <bean:write name="bean" property="case_number"/>"href="getDetail.do?case_id=<bean:write name="bean" property="case_number"/>" class="govuk-link"><bean:write name="bean" property="prime_index"/></a></td>
+								<td class="govuk-table__cell"><a aria-label="<bean:write name="bean" property="prime_index"/> account number <bean:write name="bean" property="case_number"/>" href="getDetail.do?case_id=<bean:write name="bean" property="case_number"/>" class="govuk-link"><bean:write name="bean" property="prime_index"/></a></td>
 								<td class="govuk-table__cell"><bean:write name="bean" property="date_account"/></td>
 						  </tr>
 							</logic:iterate>
@@ -74,7 +74,7 @@
 				    <ul class="govuk-list">
 			    	<% // Previous
 			    	if(currentPage > 1) { %>
-		    			<li class="pag-prev"><a class="govuk-link" href="searchResults.do?currentPage=<%=(currentPage - 1)%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Previous</a></li>
+		    			<li class="pag-prev"><a class="govuk-link" aria-label="Go to previous page" href="searchResults.do?currentPage=<%=(currentPage - 1)%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Previous</a></li>
 
 	        	<% }
 	        	// Page numbers
@@ -89,7 +89,7 @@
 	          // Next
 				    if(currentPage < (noOfPages -1))
 					 	{ %>
-				      <li class="pag-next"><a class="govuk-link" href="searchResults.do?currentPage=<%=++currentPage%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Next</a></li>
+				      <li class="pag-next"><a class="govuk-link" aria-label="Go to next page" href="searchResults.do?currentPage=<%=++currentPage%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Next</a></li>
 				    <%}%>
 						</ul>
 					</nav>													
