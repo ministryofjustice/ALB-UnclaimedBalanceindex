@@ -126,6 +126,14 @@ public class SearchAction extends Action
            
             frm = null;
             //qry.
+            if(arrResults.size() == 0)
+            {
+            	request.setAttribute("noresults", (List)arrResults);
+            }
+            else{
+            	request.setAttribute("results", (List)arrResults);
+            
+            
             int noOfPages=arrResults.size()/50;
             int mod=arrResults.size()%50;
             if(mod != 0)
@@ -144,6 +152,7 @@ public class SearchAction extends Action
             request.setAttribute("results", (List)arrResults);
             request.setAttribute("noOfPages", ++noOfPages);
             request.setAttribute("currentPage", page);
+            }
 
         }
         catch (Exception ex) {
