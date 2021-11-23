@@ -95,7 +95,7 @@
 					</nav>													
 				</logic:present>
 				<logic:present name="noresults">
-					<p class="govuk-body">No results found to display</p>
+					<p class="govuk-body">Nothing found to display.</p>
 				</logic:present>
 			</section><!-- /results-table -->
 	
