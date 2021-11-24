@@ -57,7 +57,6 @@ public class dumpDatabase extends Action
                 final Path objPath = (Path)session.get(Path.class, (Serializable)1);
                 final ServletContext context = this.servlet.getServletContext();
                 final String FILE_PATH = "/opt/hmcs/data/ubi/files/UBI_DATA.csv";
-                System.out.println(FILE_PATH);
                 final CSVReader reader = new CSVReader(new FileReader(FILE_PATH));
                 Data obj = null;
                 session.beginTransaction();
@@ -68,7 +67,7 @@ public class dumpDatabase extends Action
                 int number = 0;
                 try {
 			int id = 0;
-                    String[] nextLine = reader.readNext();
+                    String[] nextLine = null;
                     while ((nextLine = reader.readNext()) != null) {
                         final int line = nextLine.length;
                         int counter = 0;
@@ -108,43 +107,51 @@ public class dumpDatabase extends Action
                         ++counter;
                         ++number;
                         session.save(obj);
+                        //System.out.println("count is?>>>>>>>>>>>>>> "+number);
                         /*if (ctr == 1000) {
                             session.getTransaction().commit();
                             session.clear();
+                            System.out.println("coming here in commit");
                             ctr = 0;
                             session.getTransaction().begin();
                         }*/
+                        
                     }
+                    session.getTransaction().commit();
+                    result = String.valueOf(number) + " Records successfully added in database";
+                    //session.clear();
+                    //session.close();
+                    //factory.close();
+                    request.setAttribute("errMsg", (Object)result);
+                    return mapping.findForward("success");
+                    
+                    
                 }
                 catch (Exception ex) {
                     ex.printStackTrace();
                     result = "an error has occured while reading file";
-                    System.out.println("coming here in error");
                     return mapping.findForward("success");
                 }
 
-                session.getTransaction().commit();
-                result = String.valueOf(number) + " Records added in database";
-                session.clear();
-                session.close();
-                factory.close();
+                
+            }
+            catch (Exception e) {
+                  result = "Cannot find UBI_DATA.CSV file";
+                  e.printStackTrace();
                 request.setAttribute("errMsg", (Object)result);
                 return mapping.findForward("success");
-            }
-            catch (FileNotFoundException e) {
-                result = "Cannot find UBI_DATA.CSV file";
-                e.printStackTrace();
             }
             finally
             {
             	 session.clear();
                  session.close();
                  factory.close();
+                 
             }
-            request.setAttribute("errMsg", (Object)result);
-            return mapping.findForward("success");
+            //request.setAttribute("errMsg", (Object)result);
+            //return mapping.findForward("success");
         }
-        request.setAttribute("errMsg", (Object)(this.errMsg = "Session expired. Please login"));
-        return mapping.findForward("session");
+        request.setAttribute("errMsg", (Object)result);
+        return mapping.findForward("success");
     }
 }

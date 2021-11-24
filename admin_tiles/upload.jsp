@@ -20,12 +20,5 @@
 					</div>
 				</div>					
 				</logic:present>
-							
-				<html:form  action="dumpdata.do">
-					<div class="govuk-form-group">
-						<label class="govuk-label">File is successfully uploaded.</label>
-						<html:submit styleClass="govuk-button">Inject data </html:submit>
-					</div>
-				</html:form>
 		</logic:present>						
 	
