@@ -48,7 +48,7 @@
 </definition>
 
 <definition name="upload.definition" extends="base.definition">
-<put name="title" type="string" value="Success - Find unclaimed court money - GOV.UK" />
+<put name="title" type="string" value="Inject data - Find unclaimed court money - GOV.UK" />
 <put name="content" value="/admin_tiles/upload.jsp" />
 </definition>
 
