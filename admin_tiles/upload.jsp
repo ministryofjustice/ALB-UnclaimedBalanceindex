@@ -4,7 +4,7 @@
 <%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 					
 					
-			<logic:present name="user_id" scope="session">
+			
 				<a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
 				<h1 class="govuk-heading-xl">Inject data</h1>
 				
@@ -20,5 +20,4 @@
 					</div>
 				</div>					
 				</logic:present>
-		</logic:present>						
-	
+				
