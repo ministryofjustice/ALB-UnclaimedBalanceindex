@@ -39,12 +39,15 @@
 	        if(results.size()== 0){
 	          list=results;
 	        } else if(results.size()<=50){
-	            list=results.subList(pageid,results.size());
+	            list=results.subList(0,results.size());
 	        } else{
 		        if(currentPage==noOfPages-1){
 		         list=results.subList(pageid,results.size());
 		        } else{
 		          list=results.subList(pageid,endpage);
+		        }
+		        if(pageid==1)
+		        {list=results.subList(0,endpage);
 		        }
 	        }
 	        request.setAttribute("List",list);
