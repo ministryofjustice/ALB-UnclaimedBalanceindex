@@ -62,7 +62,7 @@ public class SearchAction extends Action
             factory = DBConnection.getDBConnection();
             session = (Session)factory.openSession();
             String name=frm.getName().trim().toLowerCase();
-            String case_number=frm.getCase_number().trim();
+            String case_number=null;
 
             String msg = "";
             if (frm.getName().trim() == null || frm.getName().trim().equals("")) {
