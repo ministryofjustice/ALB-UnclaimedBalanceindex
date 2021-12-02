@@ -53,6 +53,8 @@ public class SearchAction extends Action
         Query qry = null;
         this.strQry = "from Data data where ";
         this.dateFlag = false;
+        String[] searches = null;
+        boolean nameflag=false;
         
         try {
             DataForm frm = (DataForm)form;
@@ -60,16 +62,19 @@ public class SearchAction extends Action
             factory = DBConnection.getDBConnection();
             session = (Session)factory.openSession();
             String name=frm.getName().trim().toLowerCase();
-            String case_number=frm.getCase_number().trim();
+            String case_number=null;
 
             String msg = "";
             if (frm.getName().trim() == null || frm.getName().trim().equals("")) {
-                msg = "required";
-                
+                //msg = "required";
+                nameflag=true;
             }
             else {
                 msg.equals(this.validateform(frm));
             }
+            
+            //msg.equals(this.validateform(frm));
+            
             String genericerror="";
             if (msg != "") {
                 if (msg.equals("date")) {
@@ -100,15 +105,26 @@ public class SearchAction extends Action
                 request.setAttribute("fieldError", (Object)"fieldError");
                 return mapping.findForward("failure");
             }
-            this.strQry=String.valueOf(this.strQry) +"order by date_search desc";
+            this.strQry=String.valueOf(this.strQry) +" order by date_search desc";
             qry = session.createQuery(this.strQry);
-            qry.setString("searchname", "%"+name+"%");
-            if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
+            if(!nameflag)
+            {
+            searches = name.split(",", -1);
+            for(int i=0;i<searches.length;i++)
+        	{
+            	name=searches[i];
+            	String searchparam="searchname" + i;
+            	System.out.println(searchparam+">>>>>>"+name);
+            qry.setString(searchparam, "%"+name+"%");
+        	}
+            }
+           /* if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
                 if (Validator.IsValidNumber(frm.getCase_number())) {
             qry.setString("case_number", "%"+case_number+"%");
                 }
                 }
-            
+            */
+            System.out.println(this.strQry);
             logger.info(this.strQry);
             if (this.dateFlag) {
                 final int frm_year = Integer.parseInt(frm.getFrom_year()) + 2000;
@@ -170,18 +186,33 @@ public class SearchAction extends Action
         String errMsg = "";
         this.flag = false;
         String name=frm.getName().trim().toLowerCase();
-        String case_number=frm.getCase_number().trim();
+        //String case_number=frm.getCase_number().trim();
         if (frm.getName().trim() != null && !frm.getName().trim().equals("")) {
+        	
             if (Validator.IsValidName(frm.getName())) {
+            	String[] searches = name.split(",", -1);
+            	for(int i=0;i<searches.length;i++)
+            	{
+            		//searchname=searches[i];
                 //this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like '%" +  + "%' OR lower(data.credit_detail) like '%" + frm.getName().trim().toLowerCase() + "%' )";
-            	this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like :searchname OR lower(data.credit_detail) like :searchname)";
-                this.flag = true;
+            			if(i==0)
+            				{
+            					this.strQry = String.valueOf(this.strQry) + " lower(data.prime_index) like :searchname"+i+" OR lower(data.credit_detail) like :searchname"+i+" OR data.case_number like :searchname"+i;
+            				}
+            			else{
+            					this.strQry = String.valueOf(this.strQry) + " OR lower(data.prime_index) like :searchname"+i+" OR lower(data.credit_detail) like :searchname"+i+" OR data.case_number like :searchname"+i;
+            				}
+            	}
+            	this.flag = true;
+                
             }
             else {
                 errMsg = "invalid";
             }
         }
-        if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
+        /*
+         * commented code to remove number field 
+         * if (frm.getCase_number().trim() != null && !frm.getCase_number().equals("")) {
             if (Validator.IsValidNumber(frm.getCase_number())) {
                 if (this.flag) {
                     this.strQry = String.valueOf(this.strQry) + "and data.case_number like :case_number ";
@@ -194,7 +225,7 @@ public class SearchAction extends Action
             else {
                 errMsg = "invalid";
             }
-        }
+        }*/
         if (!frm.getTo_day().equals("0") || !frm.getTo_month().equals("0") || !frm.getTo_year().equals("0") || !frm.getFrom_day().equals("0") || !frm.getFrom_month().equals("0") || !frm.getFrom_year().equals("0")) {
             if (frm.getTo_day().equals("0")) {
                 errMsg = "date";

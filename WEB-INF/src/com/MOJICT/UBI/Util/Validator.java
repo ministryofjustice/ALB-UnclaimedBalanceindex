@@ -93,7 +93,7 @@ public class Validator
     }
 
     public static boolean IsValidName(final String email) {
-        final String pattern = "[\\d_a-zA-Z\\s\\-]{3,50}";
+        final String pattern = "[\\d_a-zA-Z0-9,\\s\\-]{3,50}";
         final Pattern p = Pattern.compile(pattern);
         final Matcher m = p.matcher(email);
         return m.matches();
