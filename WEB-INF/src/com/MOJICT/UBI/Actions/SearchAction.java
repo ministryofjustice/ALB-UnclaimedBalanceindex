@@ -51,7 +51,7 @@ public class SearchAction extends Action
         SessionFactory factory = null;
         List arrResults = null;
         Query qry = null;
-        this.strQry = "from Data data where ";
+        this.strQry = "from Data data where (";
         this.dateFlag = false;
         String[] searches = null;
         boolean nameflag=false;
@@ -70,7 +70,7 @@ public class SearchAction extends Action
                 nameflag=true;
                 this.flag=true;
                 
-                System.out.println("Coming in here");
+              //  System.out.println("Coming in here");
                 msg.equals(this.validateform(frm));
             }
             else {
@@ -118,7 +118,7 @@ public class SearchAction extends Action
         	{
             	name=searches[i];
             	String searchparam="searchname" + i;
-            	System.out.println(searchparam+">>>>>>"+name);
+            //	System.out.println(searchparam+">>>>>>"+name);
             qry.setString(searchparam, "%"+name+"%");
         	}
             }
@@ -128,9 +128,10 @@ public class SearchAction extends Action
                 }
                 }
             */
-            System.out.println(this.strQry);
+          //  System.out.println(this.strQry);
             logger.info(this.strQry);
             if (this.dateFlag) {
+            	//System.out.println("coming in here in date");
                 final int frm_year = Integer.parseInt(frm.getFrom_year()) + 2000;
                 final String from_year = String.valueOf(frm_year);
                 final int too_year = Integer.parseInt(frm.getTo_year()) + 2000;
@@ -175,7 +176,7 @@ public class SearchAction extends Action
         catch (Exception ex) {
 
             request.setAttribute("results",  (List)arrResults);
-          System.out.println("Its coming here in catch exception");
+          //System.out.println("Its coming here in catch exception");
             ex.printStackTrace();
         }
         finally
@@ -206,14 +207,17 @@ public class SearchAction extends Action
             			else{
             					this.strQry = String.valueOf(this.strQry) + " OR lower(data.prime_index) like :searchname"+i+" OR lower(data.credit_detail) like :searchname"+i+" OR data.case_number like :searchname"+i;
             				}
+            			
             	}
+            	
             	
             	this.flag = true;
                 
             }
             else {
-            	this.flag = true;
+            	this.flag = false;
             }
+            this.strQry = String.valueOf(this.strQry) + ")";
         }
         /*
          * commented code to remove number field 
@@ -277,12 +281,14 @@ public class SearchAction extends Action
                 }
                 if (Integer.parseInt(frm.getFrom_year()) <= Integer.parseInt(frm.getTo_year())) {
                     if (this.flag) {
+                    	
                         this.dateFlag = true;
-                        this.strQry = String.valueOf(this.strQry) + " AND data.date_search BETWEEN :from_date AND :to_date";
+                        this.strQry = String.valueOf(this.strQry) + " AND (data.date_search BETWEEN :from_date AND :to_date)";
+                        //System.out.println(this.strQry+">>>>>coming in here in date and quetryline 282");
                     }
                     else {
                         this.dateFlag = true;
-                        this.strQry = String.valueOf(this.strQry) + " data.date_search BETWEEN :from_date AND :to_date";
+                        this.strQry = String.valueOf(this.strQry) + " data.date_search BETWEEN :from_date AND :to_date)";
                     }
                     this.flag = true;
                 }
