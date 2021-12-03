@@ -44,14 +44,14 @@
 </p>
 					<html:form  styleClass="accessible" action="searchResults.do" method="get" styleId="js-search-form">
 						<div class="govuk-form-group">
-							<label class="govuk-label" for="phrase">Keyword</label>
+							<label class="govuk-label" for="phrase"><strong>Search by keywords</strong></label>
 							<div class="govuk-hint">For example, name, location, case type, organisation and/or court account number (has 9 characters, for example 27891231P)
 </div>
 							<html:text styleId="phrase" property="name" styleClass="govuk-input"></html:text>
 						</div>			
 						
 						
-						<p class="govuk-body">Search a date range (optional)</p>
+						<p class="govuk-body"><strong>Search a date range</strong></p>
 						<div class="govuk-form-group">
 						  <fieldset class="govuk-fieldset" role="group">
 						    <legend class="govuk-fieldset__legend">
