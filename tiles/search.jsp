@@ -40,12 +40,12 @@
 
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-two-thirds">
-					<p class="govuk-body">You can search by keyword and date. The more specific you are, the greater the chance of getting results.
+					<p class="govuk-body">You can search using keyword and/or date. Entering specific information will improve the accuracy of your search results.
 </p>
 					<html:form  styleClass="accessible" action="searchResults.do" method="get" styleId="js-search-form">
 						<div class="govuk-form-group">
 							<label class="govuk-label" for="phrase">Keyword</label>
-							<div class="govuk-hint">For example, name, location, case type, organisation or court account number (which has 9 characters, for example 27891231P)
+							<div class="govuk-hint">For example, name, location, case type, organisation and/or court account number (has 9 characters, for example 27891231P)
 </div>
 							<html:text styleId="phrase" property="name" styleClass="govuk-input"></html:text>
 						</div>			
