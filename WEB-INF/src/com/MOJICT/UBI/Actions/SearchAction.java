@@ -68,6 +68,10 @@ public class SearchAction extends Action
             if (frm.getName().trim() == null || frm.getName().trim().equals("")) {
                 //msg = "required";
                 nameflag=true;
+                this.flag=true;
+                
+                System.out.println("Coming in here");
+                msg.equals(this.validateform(frm));
             }
             else {
                 msg.equals(this.validateform(frm));
@@ -203,11 +207,12 @@ public class SearchAction extends Action
             					this.strQry = String.valueOf(this.strQry) + " OR lower(data.prime_index) like :searchname"+i+" OR lower(data.credit_detail) like :searchname"+i+" OR data.case_number like :searchname"+i;
             				}
             	}
+            	
             	this.flag = true;
                 
             }
             else {
-                errMsg = "invalid";
+            	this.flag = true;
             }
         }
         /*
