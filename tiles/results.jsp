@@ -83,7 +83,7 @@
 	        	// Page numbers
 	        	for(int i=1; i < noOfPages ; i++){ %>
 							<li><a class="govuk-link" 
-								href="searchResults.do?currentPage=<%=i%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>" 
+								href="searchResults.do?currentPage=<%=i%>&name=<%=request.getParameter("name") %>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>" 
 								aria-label="<%if(currentPage == i) { %>Current page, page <%=i%><% } else { %>Go to page <%=i%><%}%>"
 								<%if(currentPage==i) {%> aria-current="true"<% } %>><%=i%></a>
 							</li>
