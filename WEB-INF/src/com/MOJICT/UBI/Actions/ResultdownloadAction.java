@@ -115,7 +115,7 @@ public class ResultdownloadAction extends Action
             }
             arrResults = qry.list();
             frm = null;
-            String commalist="Name,Case_Number,Year Carried Over,Credit Details,Date Account Opened"+"\n";
+            String commalist="Name,Account number,Year Carried Over,Credit Details,Date Account Opened"+"\n";
             Data data=null;
             //FileWriter writer = new FileWriter("/files/data.csv");
             for(Object map : arrResults)
