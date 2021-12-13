@@ -24,7 +24,13 @@ import org.hibernate.SessionFactory;
 
 import com.MOJICT.UBI.Forms.DataForm;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
+import org.apache.logging.log4j.Logger;
+
+import org.apache.logging.log4j.web.WebLoggerContextUtils;
+
+
 import org.apache.struts.action.ActionForward;
 
 import javax.servlet.http.HttpServletResponse;
@@ -46,7 +52,7 @@ public class SearchAction extends Action
     }
 
     public ActionForward execute(final ActionMapping mapping, final ActionForm form, final HttpServletRequest request, final HttpServletResponse response) throws IOException, ServletException, Exception {
-    	Logger logger = Logger.getLogger(SearchAction.class);
+    	final Logger logger = LogManager.getLogger(SearchAction.class);
     	Session session = null;
         SessionFactory factory = null;
         List arrResults = null;
