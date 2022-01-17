@@ -52,15 +52,18 @@ public class DetailAction extends Action
             request.setAttribute("detail", (Object)obj);
             request.setAttribute("case", (Object)case_id);
             qry = null;
-            session.clear();
-            session.close();
-            factory.close();
+            
             return mapping.findForward("success");
         }
         catch (Exception ex) {
-		session.clear();
-            session.close();
+		
             return mapping.findForward("failure");
+        }
+        finally
+        {
+        	session.clear();
+            session.close();
+            factory.close();
         }
     }
 }
