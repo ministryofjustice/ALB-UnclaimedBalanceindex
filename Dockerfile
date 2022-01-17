@@ -16,3 +16,4 @@ RUN touch /usr/local/tomcat/logs/InfoUBILog.log
 ADD "deploy/UBI.war" /usr/local/tomcat/webapps/ROOT.war
 ADD "deploy/UBI.war" /usr/local/tomcat/webapps/unclaimedbalancesindex.war
 ADD context.xml /usr/local/tomcat/conf/context.xml
+ADD server.xml /usr/local/tomcat/conf/server.xml
