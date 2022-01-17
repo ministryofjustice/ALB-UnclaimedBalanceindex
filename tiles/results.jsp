@@ -16,7 +16,8 @@
 
 			<section id="results-table">
         <logic:present name="results">
-	        <%     
+	        <% 
+	        try{    
 	        List results= (List)request.getAttribute("results");
 	        int total=50;  
 	        int currentPage=Integer.parseInt(request.getAttribute("currentPage").toString());
@@ -51,7 +52,9 @@
 		        }
 	        }
 	        request.setAttribute("List",list);
-          request.setAttribute("results",results); %>   
+          request.setAttribute("results",results);
+          
+          %>   
 					
 					<p class="govuk-body"><a class="govuk-button" href="downloadResults.do?name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Download results as CSV</a></p>
 					
@@ -95,7 +98,21 @@
 				      <li class="pag-next"><a class="govuk-link" aria-label="Go to next page" href="searchResults.do?currentPage=<%=++currentPage%>&name=<%=request.getParameter("name") %>&case_number=<%=request.getParameter("case_number")%>&from_day=<%=request.getParameter("from_day")%>&from_month=<%=request.getParameter("from_month")%>&from_year=<%=request.getParameter("from_year")%>&to_day=<%=request.getParameter("to_day")%>&to_month=<%=request.getParameter("to_month")%>&to_year=<%=request.getParameter("to_year")%>">Next</a></li>
 				    <%}%>
 						</ul>
-					</nav>													
+					</nav>	
+					<%
+					}
+					catch(Exception e)
+					{
+					%>
+					<div class="govuk-width-container ">
+   				 <main class="govuk-main-wrapper " id="main-content" role="main">
+			
+			<p class="govuk-body">Please check if the entered details are correct or try again later.</p>
+			<p class="govuk-body">You can <a href="mailto:dex-engage@ministryofjustice.zendesk.com" class="govuk-link">contact the web team</a> to tell us about this problem.</p>
+			<p class="govuk-body">Or, <a href="https://www.gov.uk/contact-court-funds-office" class="govuk-link">contact the Courts Funds Office</a> if you need to speak to someone about unclaimed court money.</p>
+    </main>
+  </div>
+					<%} %>												
 				</logic:present>
 				<logic:present name="noresults">
 					<p class="govuk-body">Nothing found to display.</p>
