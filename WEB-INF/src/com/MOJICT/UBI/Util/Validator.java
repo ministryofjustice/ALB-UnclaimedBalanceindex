@@ -105,6 +105,18 @@ public class Validator
         final Matcher m = p.matcher(email);
         return m.matches();
     }
+    public static boolean IsValidCaseNumber(final String case_id) {
+        final String pattern = "[\\d_a-zA-Z0-9]{7,50}";
+        final Pattern p = Pattern.compile(pattern);
+        final Matcher m = p.matcher(case_id);
+        return m.matches();
+    }
+    public static boolean IsValidPageNumber(final String case_id) {
+        final String pattern = "[0-9]{1,50}";
+        final Pattern p = Pattern.compile(pattern);
+        final Matcher m = p.matcher(case_id);
+        return m.matches();
+    }
 
     public static boolean isValidDate(final String date) {
         System.out.println(date);

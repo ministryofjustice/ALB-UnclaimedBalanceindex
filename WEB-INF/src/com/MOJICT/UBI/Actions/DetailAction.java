@@ -16,6 +16,7 @@ import org.hibernate.Session;
 
 import com.MOJICT.UBI.Beans.Data;
 import com.MOJICT.UBI.Util.DBConnection;
+import com.MOJICT.UBI.Util.Validator;
 import com.library.plugin.HibernatePlugin;
 
 import org.hibernate.SessionFactory;
@@ -41,6 +42,10 @@ public class DetailAction extends Action
         session = (Session)factory.openSession();
         try {
             final String case_id = request.getParameter("case_id");
+            if(!Validator.IsValidCaseNumber(case_id))
+            {
+            	return mapping.findForward("failure");
+            }
             qry = session.createQuery("from Data data where data.case_number=:id");
             qry.setString("id", case_id);
             final Data obj = (Data) qry.list().get(0);
