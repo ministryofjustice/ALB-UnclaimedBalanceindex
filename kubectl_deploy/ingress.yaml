@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ubidemo-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    external-dns.alpha.kubernetes.io/set-identifier: ubidemo-ingress-railstest-dev-green
+    external-dns.alpha.kubernetes.io/aws-weight: "100"
+spec:
+  tls:
+  - hosts:
+    - ubidemo.apps.live.cloud-platform.service.justice.gov.uk
+  rules:
+  - host: ubidemo.apps.live.cloud-platform.service.justice.gov.uk
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ubidemo-service
+          servicePort: 5000

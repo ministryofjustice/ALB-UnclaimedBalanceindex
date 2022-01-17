@@ -11,8 +11,19 @@ ENV DB_HOST="172.22.5.164" \
 ENV CATALINA_OPTS "-Xmx512M -XX:MaxPermSize=1024m"
 
 RUN rm -rf /usr/local/tomcat/webapps/ROOT && rm -rf /usr/local/tomcat/webapps/docs
+USER 800
 RUN mkdir -p /opt/hmcs/data/ubi/files
 RUN touch /usr/local/tomcat/logs/InfoUBILog.log
 ADD "deploy/UBI.war" /usr/local/tomcat/webapps/ROOT.war
 ADD "deploy/UBI.war" /usr/local/tomcat/webapps/unclaimedbalancesindex.war
 ADD context.xml /usr/local/tomcat/conf/context.xml
+RUN addgroup --system --gid 1000 customgroup \
+    && adduser --system --uid 1000 --ingroup customgroup --shell /bin/sh customuser
+
+EXPOSE 5000
+
+
+RUN chown -R customuser:customgroup /usr/local/tomcat/webapps/
+RUN chown -R customuser:customgroup /opt/hmcs/data/ubi/files/
+# Tell docker that all future commands should run as the appuser user, must use the user number
+USER 1000
