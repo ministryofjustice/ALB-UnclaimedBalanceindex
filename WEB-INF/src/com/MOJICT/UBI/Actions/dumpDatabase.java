@@ -16,6 +16,7 @@ import java.io.FileNotFoundException;
 import java.util.Date;
 
 import com.MOJICT.UBI.Util.DBConnection;
+import com.MOJICT.UBI.Util.Validator;
 import com.MOJICT.UBI.Util.myDate;
 import com.MOJICT.UBI.Beans.Data;
 
@@ -77,6 +78,13 @@ public class dumpDatabase extends Action
                         obj = new Data();
                         obj.setUbi_id(id);
                         if (counter < line) {
+                        	System.out.println(String.valueOf(nextLine[0]) + nextLine[3]);
+                        	if(!Validator.IsValidCaseNumber(String.valueOf(nextLine[0]) + nextLine[3]) && !"Case Number".equals(String.valueOf(nextLine[0])))
+                        	{
+                        		 result = "an error has occured while reading file at line "+ctr+"so the data is not uploaded";
+                        		request.setAttribute("errMsg", (Object)result);
+                                return mapping.findForward("success");
+                        	}
                             obj.setCase_number(String.valueOf(nextLine[0]) + nextLine[3]);
                         }
                         if (++counter < line) {
