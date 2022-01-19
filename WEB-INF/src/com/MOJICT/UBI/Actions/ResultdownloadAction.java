@@ -4,24 +4,36 @@ import com.MOJICT.UBI.Actions.*;
 import com.MOJICT.UBI.Beans.Data;
 import com.MOJICT.UBI.Util.*;
 import com.MOJICT.UBI.Forms.*;
+
 import javax.servlet.ServletException;
+
 import java.io.IOException;
 import java.io.OutputStream;
+
 import org.hibernate.Query;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.hibernate.Session;
+
 import java.util.Date;
+
 import com.MOJICT.UBI.Util.myDate;
+
 import org.hibernate.SessionFactory;
+
 import com.MOJICT.UBI.Forms.DataForm;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.web.WebLoggerContextUtils;
 import org.apache.struts.action.ActionForward;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.Action;
@@ -152,11 +164,16 @@ public class ResultdownloadAction extends Action
             for(Object map : arrResults)
 
             {
-
+                
             data = (Data) map;
-
-            commalist=commalist+data.getPrime_index()+","+data.getCase_number()+","+data.getYear_carried()+","+data.getCredit_detail()+","+data.getDate_account()+"\n";
-
+            data.setPrime_index("\""+data.getPrime_index()+"\"");
+            data.setCase_number("\""+data.getCase_number()+"\"");
+            System.out.println(data.getPrime_index());
+            if(!Validator.IsValidCaseNumber(data.getCase_number()))
+        	{
+            commalist=commalist+data.getPrime_index()+","+data.getCase_number()+",\""+data.getYear_carried()+"\",\""+data.getCredit_detail()+"\",\""+data.getDate_account()+"\"\n";
+        	}
+            
             
 
             
@@ -175,7 +192,7 @@ public class ResultdownloadAction extends Action
 
           // commalist = StringUtils.join(arrResults.toArray(), ",");
 
-            //System.out.println(commalist);
+            System.out.println(commalist);
 
 
 
