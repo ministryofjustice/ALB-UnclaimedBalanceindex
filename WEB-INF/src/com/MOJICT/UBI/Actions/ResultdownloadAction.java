@@ -164,14 +164,35 @@ public class ResultdownloadAction extends Action
             for(Object map : arrResults)
 
             {
-                
-            data = (Data) map;
-            data.setPrime_index("\""+data.getPrime_index()+"\"");
+            	 data = (Data) map;
+            if(data.getCase_number().contains("\""))
+            {
+            	data.getCase_number().replace("\"", "\"\"");
+            }
+            if(data.getPrime_index().contains("\""))
+            {
+            	data.getPrime_index().replace("\"", "\"\"");
+            }
+            if(data.getYear_carried().contains("\""))
+            {
+            	data.getYear_carried().replace("\"", "\"\"");
+            }
+            if(data.getCredit_detail().contains("\""))
+            {
+            	data.getCredit_detail().replace("\"", "\"\"");
+            }
+            if(data.getDate_account().contains("\""))
+            {
+            	data.getDate_account().replace("\"", "\"\"");
+            }
+            		   
+           
+            data.setPrime_index("\'\""+data.getPrime_index()+"\"\'");
             data.setCase_number("\""+data.getCase_number()+"\"");
             System.out.println(data.getPrime_index());
             if(!Validator.IsValidCaseNumber(data.getCase_number()))
         	{
-            commalist=commalist+data.getPrime_index()+","+data.getCase_number()+",\""+data.getYear_carried()+"\",\""+data.getCredit_detail()+"\",\""+data.getDate_account()+"\"\n";
+            commalist=commalist+data.getPrime_index()+",\'"+data.getCase_number()+",\"\'"+data.getYear_carried()+"\",\"\'"+data.getCredit_detail()+"\",\"\'"+data.getDate_account()+"\"\n";
         	}
             
             
