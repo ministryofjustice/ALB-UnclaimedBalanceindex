@@ -187,12 +187,12 @@ public class ResultdownloadAction extends Action
             }
             		   
            
-            data.setPrime_index("\'\""+data.getPrime_index()+"\"\'");
-            data.setCase_number("\""+data.getCase_number()+"\"");
+            data.setPrime_index("\'\""+data.getPrime_index()+"\"");
+            data.setCase_number("\'\""+data.getCase_number()+"\"");
             System.out.println(data.getPrime_index());
             if(!Validator.IsValidCaseNumber(data.getCase_number()))
         	{
-            commalist=commalist+data.getPrime_index()+",\'"+data.getCase_number()+",\"\'"+data.getYear_carried()+"\",\"\'"+data.getCredit_detail()+"\",\"\'"+data.getDate_account()+"\"\n";
+            commalist=commalist+data.getPrime_index()+",\'"+data.getCase_number()+",\'\""+data.getYear_carried()+"\",\'\""+data.getCredit_detail()+"\",\'\""+data.getDate_account()+"\"\n";
         	}
             
             
