@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ubidemo
-        image: 754256621582.dkr.ecr.eu-west-2.amazonaws.com/dex-engage/railstest-dev-ecr:5.0
+        image: ${ECR_URL}:${IMAGE_TAG}
         ports:
         - containerPort: 5500
         env:
