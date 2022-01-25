@@ -4,7 +4,7 @@
 
 package com.MOJICT.UBI.Util;
 
-import sun.misc.BASE64Encoder;
+
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
