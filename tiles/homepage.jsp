@@ -20,7 +20,7 @@
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
           </svg></a>
 
-					<h2 class="govuk-heading-m">This is a demo CI/CD Before you start</h2>
+					<h2 class="govuk-heading-m">Before you start</h2>
 					<p class="govuk-body">If you can't use the digital service, you can call the Court Funds Office Helpline on <span class="nowrap">0300 0200 199</span>.</p>
 				</div><!-- /column-two-thirds -->
 				<div class="govuk-grid-column-one-third">
