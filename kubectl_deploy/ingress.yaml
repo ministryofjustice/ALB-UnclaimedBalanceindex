@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: ubidemo-ingress
+  namespace: railstest-dev
   annotations:
     kubernetes.io/ingress.class: nginx
     external-dns.alpha.kubernetes.io/set-identifier: ubidemo-ingress-railstest-dev-green
