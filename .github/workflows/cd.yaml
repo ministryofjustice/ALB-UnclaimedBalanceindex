@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: instal jdk8
-        run: apt-get update -y apt-get install -y software-properties-common add-apt-repository -y ppa:openjdk-r/ppa apt-get update -y apt-get install -y ant openjdk-8-jdk-headless update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+        run: apt-get update -y apt-get install -y software-properties-common add-apt-repository -y ppa:openjdk-r/ppa apt-get update -y apt-get install -y ant openjdk-8-jdk-headless 
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build app 
