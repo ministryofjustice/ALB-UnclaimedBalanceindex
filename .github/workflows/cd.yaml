@@ -12,10 +12,12 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - name: instal jdk8
-        run: apt-get update -y apt-get install -y software-properties-common add-apt-repository -y ppa:openjdk-r/ppa apt-get install -y ant openjdk-8-jdk-headless 
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Set up JDK 1.8
+        uses: joschi/setup-jdk@v2
+        with:
+          java-version: '8'
       - name: Build app 
         run: ant
       - name: Build
