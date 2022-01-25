@@ -9,9 +9,9 @@ metadata:
 spec:
   tls:
   - hosts:
-    - ubidemo.apps.live.cloud-platform.service.justice.gov.uk
+    - ubidev.apps.live.cloud-platform.service.justice.gov.uk
   rules:
-  - host: ubidemo.apps.live.cloud-platform.service.justice.gov.uk
+  - host: ubidev.apps.live.cloud-platform.service.justice.gov.uk
     http:
       paths:
       - path: /
