@@ -16,7 +16,7 @@ spec:
       - name: ubistaging
         image: ${ECR_URL}:${IMAGE_TAG}
         ports:
-        - containerPort: 5500
+        - containerPort: 5501
         env:
           - name: DB_HOST
             valueFrom:
