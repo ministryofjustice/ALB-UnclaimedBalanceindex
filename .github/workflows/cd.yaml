@@ -35,6 +35,17 @@ jobs:
         env:
           ECR_URL: ${{ secrets.ECR_URL_DEV }}
         run: export IMAGE_TAG=${{ github.sha }} && cat kubectl_deploy/deployment.tpl | envsubst > kubectl_deploy/deployment.yaml
+
+deploy-staging:
+    runs-on: ubuntu-latest
+    needs: build
+
+env:
+  KUBE_NAMESPACE: ${{ secrets.KUBE_NAMESPACE }}
+      - name: Update image tag
+        env:
+          ECR_URL: ${{ secrets.ECR_URL_DEV }}
+        run: export IMAGE_TAG=${{ github.sha }} && cat kubectl_deploy/deployment.tpl | envsubst > kubectl_deploy/deployment.yaml
       - name: Authenticate to the cluster
         env:
           KUBE_CLUSTER: ${{ secrets.KUBE_CLUSTER_DEV }}

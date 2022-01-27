@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ubistaging-service
+  labels:
+    app: ubistaging
+spec:
+  ports:
+  - port: 5000
+    name: http
+    targetPort: 8080
+  selector:
+    app: ubistaging
