@@ -17,5 +17,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: ubidemo-service
+          serviceName: ubistaging-service
           servicePort: 5001
