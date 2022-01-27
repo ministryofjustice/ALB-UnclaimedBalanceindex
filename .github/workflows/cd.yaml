@@ -42,6 +42,10 @@ deploy-staging:
 
 env:
   KUBE_NAMESPACE: ${{ secrets.KUBE_NAMESPACE }}
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
       - name: Update image tag
         env:
           ECR_URL: ${{ secrets.ECR_URL_DEV }}
