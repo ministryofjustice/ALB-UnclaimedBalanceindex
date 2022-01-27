@@ -38,6 +38,7 @@ jobs:
 
     env:
       KUBE_NAMESPACE: ${{ secrets.KUBE_NAMESPACE }}
+      
     steps:
       - name: Update image tag
        env:
