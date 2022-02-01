@@ -16,8 +16,8 @@ RUN touch /usr/local/tomcat/logs/InfoUBILog.log
 ADD "deploy/UBI.war" /usr/local/tomcat/webapps/ROOT.war
 ADD "deploy/UBI.war" /usr/local/tomcat/webapps/unclaimedbalancesindex.war
 ADD context.xml /usr/local/tomcat/conf/context.xml
-RUN addgroup --system --gid 1000 customgroup \
-    && adduser --system --uid 1000 --ingroup customgroup --shell /bin/sh customuser
+RUN addgroup --system --gid 800 customgroup \
+    && adduser --system --uid 800 --ingroup customgroup --shell /bin/sh customuser
 
 EXPOSE 5000
 
