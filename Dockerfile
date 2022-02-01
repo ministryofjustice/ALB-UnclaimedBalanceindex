@@ -25,4 +25,4 @@ EXPOSE 5000
 RUN chown -R customuser:customgroup /usr/local/tomcat/webapps/
 RUN chown -R customuser:customgroup /opt/hmcs/data/ubi/files/
 # Tell docker that all future commands should run as the appuser user, must use the user number
-USER 1000
+USER 800
