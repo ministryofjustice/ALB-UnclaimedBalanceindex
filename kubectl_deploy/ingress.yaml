@@ -2,17 +2,17 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: ubidemo-ingress
-  namespace: railstest-dev
+  namespace: ubi-dev
   annotations:
     kubernetes.io/ingress.class: nginx
-    external-dns.alpha.kubernetes.io/set-identifier: ubidemo-ingress-railstest-dev-green
+    external-dns.alpha.kubernetes.io/set-identifier: ubidemo-ingress-ubi-dev-green
     external-dns.alpha.kubernetes.io/aws-weight: "100"
 spec:
   tls:
   - hosts:
-    - ubidev.apps.live.cloud-platform.service.justice.gov.uk
+    - fumdev.apps.live.cloud-platform.service.justice.gov.uk
   rules:
-  - host: ubidev.apps.live.cloud-platform.service.justice.gov.uk
+  - host: fumdev.apps.live.cloud-platform.service.justice.gov.uk
     http:
       paths:
       - path: /
