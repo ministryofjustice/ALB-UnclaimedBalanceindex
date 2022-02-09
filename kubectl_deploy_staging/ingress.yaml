@@ -2,17 +2,17 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: ubistaging-ingress
-  namespace: railstest-dev
+  namespace: ubi-staging
   annotations:
     kubernetes.io/ingress.class: nginx
-    external-dns.alpha.kubernetes.io/set-identifier: ubistaging-ingress-railstest-dev-green
+    external-dns.alpha.kubernetes.io/set-identifier: ubistaging-ingress-ubi-staging-green
     external-dns.alpha.kubernetes.io/aws-weight: "100"
 spec:
   tls:
   - hosts:
-    - ubistaging.apps.live.cloud-platform.service.justice.gov.uk
+    - fumstaging.apps.live.cloud-platform.service.justice.gov.uk
   rules:
-  - host: ubistaging.apps.live.cloud-platform.service.justice.gov.uk
+  - host: fumstaging.apps.live.cloud-platform.service.justice.gov.uk
     http:
       paths:
       - path: /
