@@ -65,7 +65,7 @@ jobs:
     environment: staging
 
     env:
-      KUBE_NAMESPACE: ${{ secrets.KUBE_NAMESPACE_STAGING}}
+      KUBE_NAMESPACE: ${{ secrets.KUBE_NAMESPACE_STAGING }}
 
     steps:
       - name: Checkout
