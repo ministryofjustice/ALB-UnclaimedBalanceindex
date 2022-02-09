@@ -76,7 +76,7 @@ jobs:
         run: export IMAGE_TAG=${{ github.sha }} && cat kubectl_deploy_staging/deployment.tpl | envsubst > kubectl_deploy_staging/deployment.yaml
       - name: Authenticate to the cluster
         env:
-          KUBE_CLUSTER: ${{ secrets.KUBE_CLUSTER_staging }}
+          KUBE_CLUSTER: ${{ secrets.KUBE_CLUSTER_STAGING }}
         run: |
           echo "${{ secrets.KUBE_CERT_DEV }}" > ca.crt
           kubectl config set-cluster ${KUBE_CLUSTER} --certificate-authority=./ca.crt --server=https://${KUBE_CLUSTER}
