@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ubiprod-service
+  labels:
+    app: ubiprod
+spec:
+  ports:
+  - port: 5001
+    name: http
+    targetPort: 8080
+  selector:
+    app: ubiprod

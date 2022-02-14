@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ubistaging-ingress
+  namespace: ubi-prod
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    external-dns.alpha.kubernetes.io/set-identifier: ubistaging-ingress-ubi-prod-green
+    external-dns.alpha.kubernetes.io/aws-weight: "100"
+spec:
+  tls:
+  - hosts:
+    - fumprod.apps.live.cloud-platform.service.justice.gov.uk
+  rules:
+  - host: fumprod.apps.live.cloud-platform.service.justice.gov.uk
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ubiprod-service
+          servicePort: 5001
