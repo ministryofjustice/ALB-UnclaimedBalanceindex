@@ -21,7 +21,7 @@ jobs:
         kube-token: ${{ secrets.KUBE_TOKEN_DEV }}
         kube-cluster: ${{ secrets.KUBE_CLUSTER_DEV }}
         kube-namespace: ${{ secrets.KUBE_NAMESPACE_DEV }}
-        ecr-repo-name: dex-engage/ALB-UnclaimedBalanceindex
+        ecr-repo-name: "ecr-repo-${var.namespace}"
         max-old-images-to-keep: 20
   main:
     runs-on: ubuntu-latest
