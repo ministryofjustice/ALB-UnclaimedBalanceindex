@@ -16,9 +16,9 @@ metadata:
 spec:
   tls:
   - hosts:
-    - fumdev.apps.live.cloud-platform.service.justice.gov.uk
+    - dev.find-unclaimed-court-money.service.justice.gov.uk/
   rules:
-  - host: fumdev.apps.live.cloud-platform.service.justice.gov.uk
+  - host: dev.find-unclaimed-court-money.service.justice.gov.uk/
     http:
       paths:
       - path: /
