@@ -17,6 +17,7 @@ spec:
   tls:
   - hosts:
     - dev.find-unclaimed-court-money.service.justice.gov.uk
+    secretName: dev-fum-cert-secret
   rules:
   - host: dev.find-unclaimed-court-money.service.justice.gov.uk
     http:
