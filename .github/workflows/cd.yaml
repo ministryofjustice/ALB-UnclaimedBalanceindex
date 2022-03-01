@@ -22,7 +22,7 @@ jobs:
         kube-cluster: ${{ secrets.KUBE_CLUSTER_DEV }}
         kube-namespace: ${{ secrets.KUBE_NAMESPACE_DEV }}
         ecr-repo-name: dex-engage/ubi-dev-ecr
-        max-old-images-to-keep: 20
+        max-old-images-to-keep: 1
   main:
     runs-on: ubuntu-latest
     steps:

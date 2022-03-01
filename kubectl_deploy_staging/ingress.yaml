@@ -16,9 +16,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - fumstaging.apps.live.cloud-platform.service.justice.gov.uk
+    - staging.find-unclaimed-court-money.service.justice.gov.uk
+    secretName: staging-fum-cert-secret
   rules:
-  - host: fumstaging.apps.live.cloud-platform.service.justice.gov.uk
+  - host: staging.find-unclaimed-court-money.service.justice.gov.uk
     http:
       paths:
       - path: /
