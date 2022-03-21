@@ -6,8 +6,9 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/server-snippet: |
-      location ~* ^/(adminLogin) {
+      location /adminLogin.do {
          allow 81.134.202.29/32;
+         allow 192.168.5.101/32;
          deny all;
       }
     external-dns.alpha.kubernetes.io/set-identifier: ubidemo-ingress-ubi-dev-green
