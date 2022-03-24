@@ -39,13 +39,7 @@
 		   <forward name="failure" path="/error.jsp"></forward>
 		   </action>   		
 		      		
-      		<action input="login.definition" path="/validateLogin" 
-				type="com.MOJICT.UBI.Actions.ValidateAdminLoginAction"
-				name="loginForm" 
-				scope="request" >
-				<forward name="success" path="service.definition"></forward>
-  			<forward name="failure" path="/adminLogin.do"></forward>
-  		  </action>
+      		
 		  <action input="login.definition" path="/healthcheck" 
 				type="com.MOJICT.UBI.Actions.Pingdomalert"
 				name="loginForm" 
@@ -55,27 +49,7 @@
   			<forward name="failure" path="/error.jsp"></forward>
   		  </action>
   		  
-  		  <action input="service.definition" path="/fileUpload" 
-				type="com.MOJICT.UBI.Actions.UploadCSV"
-				name="loginForm" 
-				scope="request" >
-  			
-  			<forward name="success" path="/dumpdata.do"></forward>
-  			<forward name="failure" path="service.definition"></forward>
-  			<forward name="session" path="login.definition"></forward>
-  			
-  		  </action>
-  		  
-  		  <action input="upload.definition" path="/dumpdata" 
-				type="com.MOJICT.UBI.Actions.dumpDatabase"
-				name="frmCsv" 
-				scope="request" >
-  			
-  			<forward name="success" path="upload.definition"></forward>
-  			<forward name="failure" path="upload.definition"></forward>
-  			<forward name="session" path="login.definition"></forward>
-  			
-  		  </action>	
+  		 
   		  <action path="/homepage" 
 				type="com.MOJICT.UBI.Actions.UserLogOffAction"
 				scope="request" >
@@ -98,9 +72,7 @@
 			type="org.apache.struts.actions.ForwardAction"
 			parameter="search.definition" scope="request" />
 			
-			<action path="/adminLogin"
-			type="org.apache.struts.actions.ForwardAction"
-			parameter="login.definition" scope="request" />
+		
 			
 			
       		
