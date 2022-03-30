@@ -191,10 +191,10 @@ public class SearchAction extends Action
                 //this.strQry = String.valueOf(this.strQry) + " (lower(data.prime_index) like '%" +  + "%' OR lower(data.credit_detail) like '%" + frm.getName().trim().toLowerCase() + "%' )";
             			if(i==0)
             				{
-            					this.strQry = String.valueOf(this.strQry) + " lower(data.prime_index) like :searchname"+i+" OR lower(data.credit_detail) like :searchname"+i+" OR data.case_number like :searchname"+i;
+						this.strQry = String.valueOf(this.strQry) + " lower(data.prime_index) like :searchname"+i+" OR lower(data.credit_detail) like :searchname"+i+" OR lower(data.case_number) like :searchname"+i;
             				}
             			else{
-            					this.strQry = String.valueOf(this.strQry) + " OR lower(data.prime_index) like :searchname"+i+" OR lower(data.credit_detail) like :searchname"+i+" OR data.case_number like :searchname"+i;
+						this.strQry = String.valueOf(this.strQry) + " OR lower(data.prime_index) like :searchname"+i+" OR lower(data.credit_detail) like :searchname"+i+" OR lower(data.case_number) like :searchname"+i;
             				}
             			
             	}
