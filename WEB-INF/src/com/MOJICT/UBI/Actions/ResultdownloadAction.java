@@ -14,6 +14,9 @@ import java.util.List;
 import org.hibernate.Session;
 import java.util.Date;
 import com.MOJICT.UBI.Util.myDate;
+
+import io.sentry.Sentry;
+
 import org.hibernate.SessionFactory;
 import com.MOJICT.UBI.Forms.DataForm;
 import org.apache.logging.log4j.LogManager;
@@ -214,6 +217,7 @@ public class ResultdownloadAction extends Action
             catch(Exception e)
 
             {
+            	 Sentry.capture(e.getStackTrace().toString());
 
                 System.out.println(e.toString());
 
@@ -232,6 +236,7 @@ public class ResultdownloadAction extends Action
            // System.out.println("Its coming here in catch exception");
 
             ex.printStackTrace();
+            Sentry.capture(ex.getStackTrace().toString());
 
         }
 

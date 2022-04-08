@@ -18,6 +18,8 @@ import com.MOJICT.UBI.Beans.Data;
 import com.MOJICT.UBI.Util.DBConnection;
 import com.library.plugin.HibernatePlugin;
 
+import io.sentry.Sentry;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.apache.struts.action.ActionForward;
@@ -53,8 +55,10 @@ public class DetailAction extends Action
             return mapping.findForward("success");
         }
         catch (Exception ex) {
-		session.clear();
+        	session.clear();
             session.close();
+            factory.close();
+            Sentry.capture(ex.getStackTrace().toString());
             return mapping.findForward("failure");
         }
     }

@@ -5,6 +5,7 @@
 package com.MOJICT.UBI.Actions;
 
 import javax.servlet.ServletException;
+import io.sentry.Sentry;
 
 import org.apache.struts.upload.FormFile;
 import org.hibernate.Session;
@@ -22,6 +23,8 @@ import com.MOJICT.UBI.Util.DBConnection;
 import com.MOJICT.UBI.Util.Validator;
 import com.MOJICT.UBI.Forms.loginBean;
 import com.library.plugin.HibernatePlugin;
+
+import io.sentry.Sentry;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -73,6 +76,7 @@ public class UploadCSV extends Action
                     catch (IOException ex) {
                         request.setAttribute("errMsg", (Object)(this.errMsg = ex.getMessage()));
                         ex.printStackTrace();
+                        Sentry.capture(ex.getStackTrace().toString());
                         return mapping.findForward("failure");
                     }
                     return mapping.findForward("success");
@@ -87,6 +91,7 @@ public class UploadCSV extends Action
             catch (Exception ex2) {
                 ex2.printStackTrace();
                 request.setAttribute("errMsg", (Object)(this.errMsg = ex2.getMessage()));
+                Sentry.capture(ex2.getStackTrace().toString());
                 return mapping.findForward("failure");
             }
         }

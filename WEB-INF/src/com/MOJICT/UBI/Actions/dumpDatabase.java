@@ -22,6 +22,7 @@ import com.MOJICT.UBI.Beans.Data;
 import java.io.Reader;
 
 import au.com.bytecode.opencsv.CSVReader;
+import io.sentry.Sentry;
 
 import java.io.FileReader;
 import java.io.Serializable;
@@ -139,6 +140,7 @@ public class dumpDatabase extends Action
                   result = "Cannot find UBI_DATA.CSV file";
                   e.printStackTrace();
                 request.setAttribute("errMsg", (Object)result);
+                Sentry.capture(e.getStackTrace().toString());
                 return mapping.findForward("success");
             }
             finally

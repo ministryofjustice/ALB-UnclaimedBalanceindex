@@ -11,6 +11,9 @@ import java.util.List;
 import org.hibernate.Session;
 import java.util.Date;
 import com.MOJICT.UBI.Util.myDate;
+
+import io.sentry.Sentry;
+
 import org.hibernate.SessionFactory;
 import com.MOJICT.UBI.Forms.DataForm;
 import org.apache.logging.log4j.LogManager;
@@ -118,7 +121,8 @@ public class SearchAction extends Action
                 }
             */
           //  System.out.println(this.strQry);
-            logger.info(this.strQry);
+            //logger.info(this.strQry);
+            //Sentry.capture(this.strQry);
             if (this.dateFlag) {
             	//System.out.println("coming in here in date");
                 final int frm_year = Integer.parseInt(frm.getFrom_year()) + 2000;
@@ -167,6 +171,7 @@ public class SearchAction extends Action
             request.setAttribute("results",  (List)arrResults);
           //System.out.println("Its coming here in catch exception");
             ex.printStackTrace();
+            Sentry.capture(ex.getStackTrace().toString());
         }
         finally
         {

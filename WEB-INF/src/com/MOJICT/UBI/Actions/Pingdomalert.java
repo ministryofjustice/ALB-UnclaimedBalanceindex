@@ -14,6 +14,8 @@ import com.MOJICT.UBI.Util.PasswordService;
 import com.MOJICT.UBI.Forms.loginBean;
 import com.library.plugin.HibernatePlugin;
 
+import io.sentry.Sentry;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.apache.struts.action.ActionForward;
@@ -62,6 +64,7 @@ public class Pingdomalert extends Action
             e.printStackTrace();
             session.close();
             factory.close();
+            Sentry.capture(e.getStackTrace().toString());
             return mapping.findForward("failure");
         }
         frm = null;
