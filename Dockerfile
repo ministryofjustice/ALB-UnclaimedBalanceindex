@@ -8,7 +8,7 @@ ENV DB_HOST="172.22.5.164" \
     ADMIN_USER=admin \
     ADMIN_PASS=admin
 
-ENV CATALINA_OPTS "-Xmx512M -XX:MaxPermSize=1024m"
+ENV CATALINA_OPTS "-Xmx512M"
 
 RUN rm -rf /usr/local/tomcat/webapps/ROOT && rm -rf /usr/local/tomcat/webapps/docs
 RUN mkdir -p /opt/hmcs/data/ubi/files
