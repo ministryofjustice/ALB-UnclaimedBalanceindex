@@ -28,10 +28,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Set up JDK 1.8
+      - name: Set up JRE 11
         uses: joschi/setup-jdk@v2
         with:
-          java-version: '8'
+          java-version: '11'
       - name: Build app 
         run: ant
       - name: Build
