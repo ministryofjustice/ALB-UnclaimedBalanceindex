@@ -75,11 +75,7 @@
     <div class="app-phase-banner__wrapper">
       <div class="govuk-phase-banner app-phase-banner app-width-container">
         <p class="govuk-phase-banner__content">
-          <strong class="govuk-tag govuk-phase-banner__content__tag">FEEDBACK</strong>
-          <span class="govuk-phase-banner__text">
-            <!-- We're currently working to update and improve this service.   -->
-            We've updated, improved and renamed the Unclaimed Balance Index service. Your feedback will help us to improve it.
-          </span>
+          
         </p>
       </div>  
     </div>
