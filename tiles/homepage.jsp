@@ -5,7 +5,7 @@
 
 			<div class="govuk-grid-row">
 				<div class="govuk-grid-column-two-thirds">
-					<h1 class="govuk-heading-xl">UBI</h1>
+					<h1 class="govuk-heading-xl">Find unclaimed court money</h1>
 
 					<p class="govuk-body">You can find and claim money you're entitled to from a civil court in England and Wales if it has not been claimed.</p>
 					<p class="govuk-body">This could be money paid to or awarded by a court (for example to settle a court case) to you or to someone whose <a href="https://www.gov.uk/unclaimed-estates-bona-vacantia" class="govuk-link">estate you're entitled to claim</a>.</p>

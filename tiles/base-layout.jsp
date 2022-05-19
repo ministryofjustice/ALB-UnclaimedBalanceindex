@@ -74,9 +74,7 @@
   <div class="govuk-width-container ">
     <div class="app-phase-banner__wrapper">
       <div class="govuk-phase-banner app-phase-banner app-width-container">
-        <p class="govuk-phase-banner__content">
-          
-        </p>
+       
       </div>  
     </div>
   </div>                       
@@ -84,7 +82,7 @@
      
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-      <p> This is just a test</p>
+      
       <tiles:insert attribute="content" />
     </main>
   </div>
