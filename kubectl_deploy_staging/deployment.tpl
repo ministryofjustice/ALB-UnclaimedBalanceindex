@@ -18,24 +18,6 @@ spec:
         image: ${ECR_URL}:${IMAGE_TAG}
         ports:
         - containerPort: 5501
-        readinessProbe: 
-         httpGet:
-            path: /healthcheck
-            port: 5501
-            httpHeaders:
-              - name: X-Forwarded-Proto
-                value: https
-              - name: X-Forwarded-Ssl
-                value: "on"
-        livenessProbe:
-          httpGet:
-            path: /healthcheck
-            port: 5501
-            httpHeaders:
-              - name: X-Forwarded-Proto
-                value: https
-              - name: X-Forwarded-Ssl
-                value: "on"
         env:
           - name: DB_HOST
             valueFrom:
