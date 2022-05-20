@@ -46,5 +46,8 @@
 	<classpathentry kind="lib" path="WEB-INF/lib/log4j-api-2.17.1.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/log4j-core-2.17.1.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/log4j-web-2.17.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/sentry-1.7.30.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/sentry-log4j-1.7.30.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/slf4j-api-1.7.24.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>
