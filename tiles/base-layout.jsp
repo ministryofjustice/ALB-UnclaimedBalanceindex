@@ -81,7 +81,6 @@
      
   <div class="govuk-width-container ">
     <main class="govuk-main-wrapper " id="main-content" role="main">
-      
       <tiles:insert attribute="content" />
     </main>
   </div>
