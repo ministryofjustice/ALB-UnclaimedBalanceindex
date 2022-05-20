@@ -74,7 +74,6 @@
   <div class="govuk-width-container ">
     <div class="app-phase-banner__wrapper">
       <div class="govuk-phase-banner app-phase-banner app-width-container">
-       
       </div>  
     </div>
   </div>                       
