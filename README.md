@@ -1,5 +1,10 @@
-Unclaimed Balance Indexes
+Unclaimed Balance Indexes - DEPRECATED
 =========================
+
+***
+This site is no longer in use and has been replaced by https://github.com/ministryofjustice/find-unclaimed-court-money
+***
+
 A public facing service written in Java using the struts framework. 
 
 The public use the service to search online for unclaimed funds held by the Court Funds office. 
